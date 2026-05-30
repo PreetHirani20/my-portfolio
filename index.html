@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=Cabinet+Grotesk:wght@300;400;500;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -26,1317 +26,1495 @@
 
 <body>
     <div class="cursor-dot" id="cursorDot"></div>
+    <div id="main-wrapper"
+        style="transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s cubic-bezier(0.4, 0, 0.2, 1), border-radius 0.5s cubic-bezier(0.4, 0, 0.2, 1); transform-origin: center center; min-height: 100vh; background: var(--bg); overflow: hidden;">
 
-    <!-- NAV -->
-    <nav>
-        <div class="nav-logo">P<span>.</span>Hirani</div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="nav-links">
-            <a href="#projects">Work</a>
-            <a href="#writing">Writing</a>
-            <a href="#experience">Experience</a>
-            <a href="#techstack">Stack</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="nav-badge" style="visibility: hidden;">Available for roles</div>
-    </nav>
+        <!-- NAV -->
+        <nav>
+            <div class="nav-logo">P<span>.</span>Hirani</div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#projects">Work</a>
+                <a href="#writing">Writing</a>
+                <a href="#experience">Experience</a>
+                <a href="#techstack">Stack</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-badge" style="visibility: hidden;">Available for roles</div>
+        </nav>
 
-    <!-- ==============================
+        <!-- ==============================
      1. CINEMATIC LOADING / INTRO
      ============================== -->
-    <section id="loading">
-        <div class="loading-grid"></div>
-        <div class="loading-orb"></div>
-        <div class="loading-ring">
-            <div class="loading-initials">PH</div>
-        </div>
-        <div class="loading-text">Initializing portfolio</div>
-        <div class="loading-title">Preet Hirani</div>
-        <div class="loading-subtitle">AI Systems Engineer · Mumbai</div>
-        <div class="loading-bar">
-            <div class="loading-bar-fill"></div>
-        </div>
-    </section>
+        <section id="loading">
+            <div class="loading-grid"></div>
+            <div class="loading-orb"></div>
+            <div class="loading-ring">
+                <div class="loading-initials">PH</div>
+            </div>
+            <div class="loading-text">Initializing portfolio</div>
+            <div class="loading-title">Preet Hirani</div>
+            <div class="loading-subtitle">AI Systems Engineer · Mumbai</div>
+            <div class="loading-bar">
+                <div class="loading-bar-fill"></div>
+            </div>
+        </section>
 
-    <div class="glow-line"></div>
+        <div class="glow-line"></div>
 
-    <!-- ==============================
+        <!-- ==============================
      2. HERO SECTION
      ============================== -->
-    <section id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
+        <section id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-grid"></div>
 
-        <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;">
-            <div class="hero-badge">
-                <div class="hero-badge-dot"></div>
-                Forward Deployed AI Engineer
+            <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;">
+                <div class="hero-badge">
+                    <div class="hero-badge-dot"></div>
+                    Forward Deployed AI Engineer
+                </div>
+                <h1 class="hero-headline">
+                    <span class="line1">Building AI</span><br>
+                    <span class="line2">Systems that</span><br>
+                    <span class="line2">Ship.</span>
+                    <span class="line3">Meta PyTorch Finalist · Full-Stack + AI Automation · Mumbai</span>
+                </h1>
+                <p class="hero-desc">
+                    I design and deploy AI infrastructure that solves real enterprise problems — from LLM orchestration
+                    pipelines to reinforcement learning environments. 1.5 years of production-grade delivery.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn-primary">
+                        View Projects <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            style="margin-top:1px">
+                            <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        Get in Touch
+                    </a>
+                </div>
+                <div class="hero-meta">
+                    <div>
+                        <div class="hero-stat-num">52K+</div>
+                        <div class="hero-stat-label">Hackathon participants beaten</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">40%</div>
+                        <div class="hero-stat-label">Scheduling time reduced</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">4+</div>
+                        <div class="hero-stat-label">Freelance clients shipped</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">3+</div>
+                        <div class="hero-stat-label">AI systems in production</div>
+                    </div>
+                </div>
             </div>
-            <h1 class="hero-headline">
-                <span class="line1">Building AI</span><br>
-                <span class="line2">Systems that</span><br>
-                <span class="line2">Ship.</span>
-                <span class="line3">Meta PyTorch Finalist · Full-Stack + AI Automation · Mumbai</span>
-            </h1>
-            <p class="hero-desc">
-                I design and deploy AI infrastructure that solves real enterprise problems — from LLM orchestration
-                pipelines to reinforcement learning environments. 1.5 years of production-grade delivery.
-            </p>
-            <div class="hero-ctas">
-                <a href="#projects" class="btn-primary">
-                    View Projects <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="margin-top:1px">
-                        <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
-                <a href="#contact" class="btn-secondary">
-                    Get in Touch
-                </a>
+
+            <!-- NODE GRAPH HERO VISUAL -->
+            <div class="hero-visual">
+                <svg class="node-canvas" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3" />
+                            <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+                        </radialGradient>
+                        <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#2563eb" stop-opacity="0.2" />
+                            <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
+                        </radialGradient>
+                        <filter id="blur1">
+                            <feGaussianBlur stdDeviation="8" />
+                        </filter>
+                    </defs>
+
+                    <!-- Glow blobs -->
+                    <ellipse cx="300" cy="220" rx="160" ry="120" fill="url(#glow1)" filter="url(#blur1)" />
+                    <ellipse cx="450" cy="350" rx="100" ry="80" fill="url(#glow2)" filter="url(#blur1)" />
+
+                    <!-- Connection lines -->
+                    <line x1="300" y1="220" x2="160" y2="120" stroke="rgba(167,139,250,0.2)" stroke-width="1"
+                        stroke-dasharray="4 4" />
+                    <line x1="300" y1="220" x2="440" y2="120" stroke="rgba(167,139,250,0.2)" stroke-width="1"
+                        stroke-dasharray="4 4" />
+                    <line x1="300" y1="220" x2="160" y2="340" stroke="rgba(96,165,250,0.15)" stroke-width="1"
+                        stroke-dasharray="4 4" />
+                    <line x1="300" y1="220" x2="440" y2="340" stroke="rgba(96,165,250,0.15)" stroke-width="1"
+                        stroke-dasharray="4 4" />
+                    <line x1="300" y1="220" x2="300" y2="80" stroke="rgba(167,139,250,0.25)" stroke-width="1.5" />
+                    <line x1="300" y1="220" x2="300" y2="380" stroke="rgba(96,165,250,0.2)" stroke-width="1.5" />
+                    <line x1="300" y1="220" x2="80" y2="220" stroke="rgba(167,139,250,0.15)" stroke-width="1"
+                        stroke-dasharray="4 4" />
+                    <line x1="300" y1="220" x2="520" y2="220" stroke="rgba(96,165,250,0.15)" stroke-width="1"
+                        stroke-dasharray="4 4" />
+
+                    <!-- Outer satellite nodes -->
+                    <!-- Top center -->
+                    <g class="node-float" style="animation-delay:0s">
+                        <rect x="250" y="44" width="100" height="32" rx="8" fill="rgba(124,58,237,0.15)"
+                            stroke="rgba(167,139,250,0.4)" stroke-width="0.8" />
+                        <text x="300" y="64" text-anchor="middle" fill="#a78bfa" font-family="Fira Code" font-size="9"
+                            letter-spacing="0.08em">LLM ROUTER</text>
+                    </g>
+                    <!-- Top left -->
+                    <g class="node-float" style="animation-delay:1s">
+                        <rect x="100" y="88" width="116" height="32" rx="8" fill="rgba(37,99,235,0.1)"
+                            stroke="rgba(96,165,250,0.3)" stroke-width="0.8" />
+                        <text x="158" y="108" text-anchor="middle" fill="#60a5fa" font-family="Fira Code" font-size="9"
+                            letter-spacing="0.08em">FASTAPI SERVER</text>
+                    </g>
+                    <!-- Top right -->
+                    <g class="node-float" style="animation-delay:0.5s">
+                        <rect x="386" y="88" width="108" height="32" rx="8" fill="rgba(124,58,237,0.1)"
+                            stroke="rgba(167,139,250,0.3)" stroke-width="0.8" />
+                        <text x="440" y="108" text-anchor="middle" fill="#a78bfa" font-family="Fira Code" font-size="9"
+                            letter-spacing="0.08em">N8N PIPELINE</text>
+                    </g>
+                    <!-- Left -->
+                    <g class="node-float" style="animation-delay:1.5s">
+                        <rect x="14" y="202" width="116" height="32" rx="8" fill="rgba(255,255,255,0.03)"
+                            stroke="rgba(255,255,255,0.1)" stroke-width="0.8" />
+                        <text x="72" y="222" text-anchor="middle" fill="#7a7890" font-family="Fira Code" font-size="9"
+                            letter-spacing="0.08em">PYDANTIC SCHEMA</text>
+                    </g>
+                    <!-- Right -->
+                    <g class="node-float" style="animation-delay:2s">
+                        <rect x="470" y="202" width="108" height="32" rx="8" fill="rgba(255,255,255,0.03)"
+                            stroke="rgba(255,255,255,0.1)" stroke-width="0.8" />
+                        <text x="524" y="222" text-anchor="middle" fill="#7a7890" font-family="Fira Code" font-size="9"
+                            letter-spacing="0.08em">DOCKER DEPLOY</text>
+                    </g>
+                    <!-- Bottom left -->
+                    <g class="node-float" style="animation-delay:0.8s">
+                        <rect x="100" y="314" width="108" height="32" rx="8" fill="rgba(37,99,235,0.08)"
+                            stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
+                        <text x="154" y="334" text-anchor="middle" fill="#60a5fa" font-family="Fira Code" font-size="9"
+                            letter-spacing="0.08em">RL ENVIRONMENT</text>
+                    </g>
+                    <!-- Bottom right -->
+                    <g class="node-float" style="animation-delay:1.2s">
+                        <rect x="386" y="314" width="100" height="32" rx="8" fill="rgba(124,58,237,0.08)"
+                            stroke="rgba(167,139,250,0.2)" stroke-width="0.8" />
+                        <text x="436" y="334" text-anchor="middle" fill="#a78bfa" font-family="Fira Code" font-size="9"
+                            letter-spacing="0.08em">GROQ/LLAMA 3</text>
+                    </g>
+                    <!-- Bottom center -->
+                    <g class="node-float" style="animation-delay:0.3s">
+                        <rect x="250" y="376" width="100" height="32" rx="8" fill="rgba(96,165,250,0.1)"
+                            stroke="rgba(96,165,250,0.3)" stroke-width="0.8" />
+                        <text x="300" y="396" text-anchor="middle" fill="#60a5fa" font-family="Fira Code" font-size="9"
+                            letter-spacing="0.08em">OPENAI API</text>
+                    </g>
+
+                    <!-- CENTER NODE -->
+                    <circle cx="300" cy="220" r="40" fill="rgba(124,58,237,0.15)" stroke="rgba(167,139,250,0.5)"
+                        stroke-width="1" />
+                    <circle cx="300" cy="220" r="28" fill="rgba(124,58,237,0.2)" stroke="rgba(167,139,250,0.6)"
+                        stroke-width="0.8" />
+                    <text x="300" y="215" text-anchor="middle" fill="#a78bfa" font-family="Space Grotesk" font-size="11"
+                        font-weight="700" letter-spacing="-0.3px">PREET</text>
+                    <text x="300" y="228" text-anchor="middle" fill="rgba(167,139,250,0.6)" font-family="Fira Code"
+                        font-size="7" letter-spacing="0.1em">AI ENGINEER</text>
+
+                    <!-- Animated dots on lines -->
+                    <circle r="3" fill="#a78bfa" opacity="0.8">
+                        <animateMotion dur="3s" repeatCount="indefinite" path="M300,220 L300,80" />
+                        <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
+                    </circle>
+                    <circle r="3" fill="#60a5fa" opacity="0.8">
+                        <animateMotion dur="4s" repeatCount="indefinite" path="M300,220 L440,120" />
+                        <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" />
+                    </circle>
+                    <circle r="3" fill="#a78bfa" opacity="0.6">
+                        <animateMotion dur="3.5s" repeatCount="indefinite" path="M300,220 L160,340" />
+                        <animate attributeName="opacity" values="0;1;0" dur="3.5s" repeatCount="indefinite" />
+                    </circle>
+                </svg>
             </div>
-            <div class="hero-meta">
-                <div>
-                    <div class="hero-stat-num">52K+</div>
-                    <div class="hero-stat-label">Hackathon participants beaten</div>
-                </div>
-                <div>
-                    <div class="hero-stat-num">40%</div>
-                    <div class="hero-stat-label">Scheduling time reduced</div>
-                </div>
-                <div>
-                    <div class="hero-stat-num">4+</div>
-                    <div class="hero-stat-label">Freelance clients shipped</div>
-                </div>
-                <div>
-                    <div class="hero-stat-num">3+</div>
-                    <div class="hero-stat-label">AI systems in production</div>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <!-- NODE GRAPH HERO VISUAL -->
-        <div class="hero-visual">
-            <svg class="node-canvas" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3" />
-                        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
-                    </radialGradient>
-                    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stop-color="#2563eb" stop-opacity="0.2" />
-                        <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
-                    </radialGradient>
-                    <filter id="blur1">
-                        <feGaussianBlur stdDeviation="8" />
-                    </filter>
-                </defs>
+        <div class="glow-line"></div>
 
-                <!-- Glow blobs -->
-                <ellipse cx="300" cy="220" rx="160" ry="120" fill="url(#glow1)" filter="url(#blur1)" />
-                <ellipse cx="450" cy="350" rx="100" ry="80" fill="url(#glow2)" filter="url(#blur1)" />
-
-                <!-- Connection lines -->
-                <line x1="300" y1="220" x2="160" y2="120" stroke="rgba(167,139,250,0.2)" stroke-width="1"
-                    stroke-dasharray="4 4" />
-                <line x1="300" y1="220" x2="440" y2="120" stroke="rgba(167,139,250,0.2)" stroke-width="1"
-                    stroke-dasharray="4 4" />
-                <line x1="300" y1="220" x2="160" y2="340" stroke="rgba(96,165,250,0.15)" stroke-width="1"
-                    stroke-dasharray="4 4" />
-                <line x1="300" y1="220" x2="440" y2="340" stroke="rgba(96,165,250,0.15)" stroke-width="1"
-                    stroke-dasharray="4 4" />
-                <line x1="300" y1="220" x2="300" y2="80" stroke="rgba(167,139,250,0.25)" stroke-width="1.5" />
-                <line x1="300" y1="220" x2="300" y2="380" stroke="rgba(96,165,250,0.2)" stroke-width="1.5" />
-                <line x1="300" y1="220" x2="80" y2="220" stroke="rgba(167,139,250,0.15)" stroke-width="1"
-                    stroke-dasharray="4 4" />
-                <line x1="300" y1="220" x2="520" y2="220" stroke="rgba(96,165,250,0.15)" stroke-width="1"
-                    stroke-dasharray="4 4" />
-
-                <!-- Outer satellite nodes -->
-                <!-- Top center -->
-                <g class="node-float" style="animation-delay:0s">
-                    <rect x="250" y="44" width="100" height="32" rx="8" fill="rgba(124,58,237,0.15)"
-                        stroke="rgba(167,139,250,0.4)" stroke-width="0.8" />
-                    <text x="300" y="64" text-anchor="middle" fill="#a78bfa" font-family="DM Mono" font-size="9"
-                        letter-spacing="0.08em">LLM ROUTER</text>
-                </g>
-                <!-- Top left -->
-                <g class="node-float" style="animation-delay:1s">
-                    <rect x="100" y="88" width="116" height="32" rx="8" fill="rgba(37,99,235,0.1)"
-                        stroke="rgba(96,165,250,0.3)" stroke-width="0.8" />
-                    <text x="158" y="108" text-anchor="middle" fill="#60a5fa" font-family="DM Mono" font-size="9"
-                        letter-spacing="0.08em">FASTAPI SERVER</text>
-                </g>
-                <!-- Top right -->
-                <g class="node-float" style="animation-delay:0.5s">
-                    <rect x="386" y="88" width="108" height="32" rx="8" fill="rgba(124,58,237,0.1)"
-                        stroke="rgba(167,139,250,0.3)" stroke-width="0.8" />
-                    <text x="440" y="108" text-anchor="middle" fill="#a78bfa" font-family="DM Mono" font-size="9"
-                        letter-spacing="0.08em">N8N PIPELINE</text>
-                </g>
-                <!-- Left -->
-                <g class="node-float" style="animation-delay:1.5s">
-                    <rect x="14" y="202" width="116" height="32" rx="8" fill="rgba(255,255,255,0.03)"
-                        stroke="rgba(255,255,255,0.1)" stroke-width="0.8" />
-                    <text x="72" y="222" text-anchor="middle" fill="#7a7890" font-family="DM Mono" font-size="9"
-                        letter-spacing="0.08em">PYDANTIC SCHEMA</text>
-                </g>
-                <!-- Right -->
-                <g class="node-float" style="animation-delay:2s">
-                    <rect x="470" y="202" width="108" height="32" rx="8" fill="rgba(255,255,255,0.03)"
-                        stroke="rgba(255,255,255,0.1)" stroke-width="0.8" />
-                    <text x="524" y="222" text-anchor="middle" fill="#7a7890" font-family="DM Mono" font-size="9"
-                        letter-spacing="0.08em">DOCKER DEPLOY</text>
-                </g>
-                <!-- Bottom left -->
-                <g class="node-float" style="animation-delay:0.8s">
-                    <rect x="100" y="314" width="108" height="32" rx="8" fill="rgba(37,99,235,0.08)"
-                        stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
-                    <text x="154" y="334" text-anchor="middle" fill="#60a5fa" font-family="DM Mono" font-size="9"
-                        letter-spacing="0.08em">RL ENVIRONMENT</text>
-                </g>
-                <!-- Bottom right -->
-                <g class="node-float" style="animation-delay:1.2s">
-                    <rect x="386" y="314" width="100" height="32" rx="8" fill="rgba(124,58,237,0.08)"
-                        stroke="rgba(167,139,250,0.2)" stroke-width="0.8" />
-                    <text x="436" y="334" text-anchor="middle" fill="#a78bfa" font-family="DM Mono" font-size="9"
-                        letter-spacing="0.08em">GROQ/LLAMA 3</text>
-                </g>
-                <!-- Bottom center -->
-                <g class="node-float" style="animation-delay:0.3s">
-                    <rect x="250" y="376" width="100" height="32" rx="8" fill="rgba(96,165,250,0.1)"
-                        stroke="rgba(96,165,250,0.3)" stroke-width="0.8" />
-                    <text x="300" y="396" text-anchor="middle" fill="#60a5fa" font-family="DM Mono" font-size="9"
-                        letter-spacing="0.08em">OPENAI API</text>
-                </g>
-
-                <!-- CENTER NODE -->
-                <circle cx="300" cy="220" r="40" fill="rgba(124,58,237,0.15)" stroke="rgba(167,139,250,0.5)"
-                    stroke-width="1" />
-                <circle cx="300" cy="220" r="28" fill="rgba(124,58,237,0.2)" stroke="rgba(167,139,250,0.6)"
-                    stroke-width="0.8" />
-                <text x="300" y="215" text-anchor="middle" fill="#a78bfa" font-family="Syne" font-size="11"
-                    font-weight="700" letter-spacing="-0.3px">PREET</text>
-                <text x="300" y="228" text-anchor="middle" fill="rgba(167,139,250,0.6)" font-family="DM Mono"
-                    font-size="7" letter-spacing="0.1em">AI ENGINEER</text>
-
-                <!-- Animated dots on lines -->
-                <circle r="3" fill="#a78bfa" opacity="0.8">
-                    <animateMotion dur="3s" repeatCount="indefinite" path="M300,220 L300,80" />
-                    <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
-                </circle>
-                <circle r="3" fill="#60a5fa" opacity="0.8">
-                    <animateMotion dur="4s" repeatCount="indefinite" path="M300,220 L440,120" />
-                    <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" />
-                </circle>
-                <circle r="3" fill="#a78bfa" opacity="0.6">
-                    <animateMotion dur="3.5s" repeatCount="indefinite" path="M300,220 L160,340" />
-                    <animate attributeName="opacity" values="0;1;0" dur="3.5s" repeatCount="indefinite" />
-                </circle>
-            </svg>
-        </div>
-    </section>
-
-    <div class="glow-line"></div>
-
-    <!-- ==============================
+        <!-- ==============================
      3. FEATURED PROJECTS
      ============================== -->
-    <section id="projects">
-        <div style="max-width:1200px;margin:0 auto;">
-            <div class="section-header">
-                <div class="section-eyebrow">// featured work</div>
-                <h2 class="section-title">Systems I've <em>Shipped</em></h2>
-                <p class="section-sub">End-to-end projects from architecture to production. Each one solving a real
-                    business problem.</p>
+        <section id="projects">
+            <div style="max-width:1200px;margin:0 auto;">
+                <div class="section-header">
+                    <div class="section-eyebrow">// featured work</div>
+                    <h2 class="section-title">Systems I've <em>Shipped</em></h2>
+                    <p class="section-sub">End-to-end projects from architecture to production. Each one solving a real
+                        business problem.</p>
+                </div>
+
+                <div class="project-grid">
+
+                    <!-- PROJECT 1: OpenEnv Logistics -->
+                    <div class="project-card" id="project-1" style="cursor: pointer;">
+                        <div>
+                            <div class="project-number">01 / 08</div>
+                            <div class="project-tag">🏆 Hackathon Finalist</div>
+                            <div class="project-title">OpenEnv Logistics</div>
+                            <p class="project-desc">A fully containerized RL environment to benchmark LLM-powered
+                                autonomous
+                                freight dispatchers against real-world supply chain tradeoffs. Built to survive
+                                adversarial
+                                30-minute grading pipelines.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <div class="metric-val">52K+</div>
+                                    <div class="metric-label">Participants</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-val">0.0–1.0</div>
+                                    <div class="metric-label">Grader precision</div>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span class="stack-pill">Python</span>
+                                <span class="stack-pill">FastAPI</span>
+                                <span class="stack-pill">Docker</span>
+                                <span class="stack-pill">Pydantic</span>
+                                <span class="stack-pill">RL</span>
+                                <span class="stack-pill">Gemini API</span>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <svg viewBox="0 0 320 240" width="100%" height="100%">
+                                <defs>
+                                    <radialGradient id="pg1" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.15" />
+                                        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                                <rect width="320" height="240" fill="url(#pg1)" />
+                                <!-- Freight network graph -->
+                                <line x1="160" y1="120" x2="80" y2="60" stroke="rgba(167,139,250,0.3)" stroke-width="1"
+                                    stroke-dasharray="3 3" />
+                                <line x1="160" y1="120" x2="240" y2="60" stroke="rgba(167,139,250,0.3)" stroke-width="1"
+                                    stroke-dasharray="3 3" />
+                                <line x1="160" y1="120" x2="80" y2="180" stroke="rgba(96,165,250,0.2)" stroke-width="1"
+                                    stroke-dasharray="3 3" />
+                                <line x1="160" y1="120" x2="240" y2="180" stroke="rgba(96,165,250,0.2)" stroke-width="1"
+                                    stroke-dasharray="3 3" />
+                                <line x1="80" y1="60" x2="240" y2="60" stroke="rgba(167,139,250,0.15)"
+                                    stroke-width="0.8" />
+                                <line x1="80" y1="180" x2="240" y2="180" stroke="rgba(96,165,250,0.15)"
+                                    stroke-width="0.8" />
+                                <!-- Nodes -->
+                                <circle cx="160" cy="120" r="22" fill="rgba(124,58,237,0.2)"
+                                    stroke="rgba(167,139,250,0.5)" stroke-width="1" />
+                                <text x="160" y="116" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                    font-size="7" letter-spacing="0.05em">DISPATCHER</text>
+                                <text x="160" y="127" text-anchor="middle" fill="rgba(167,139,250,0.6)"
+                                    font-family="Fira Code" font-size="6">LLM AGENT</text>
+                                <circle cx="80" cy="60" r="14" fill="rgba(37,99,235,0.15)" stroke="rgba(96,165,250,0.4)"
+                                    stroke-width="0.8" />
+                                <text x="80" y="64" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                    font-size="6">PORT A</text>
+                                <circle cx="240" cy="60" r="14" fill="rgba(37,99,235,0.15)"
+                                    stroke="rgba(96,165,250,0.4)" stroke-width="0.8" />
+                                <text x="240" y="64" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                    font-size="6">PORT B</text>
+                                <circle cx="80" cy="180" r="14" fill="rgba(124,58,237,0.1)"
+                                    stroke="rgba(167,139,250,0.3)" stroke-width="0.8" />
+                                <text x="80" y="184" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                    font-size="6">DEPOT</text>
+                                <circle cx="240" cy="180" r="14" fill="rgba(124,58,237,0.1)"
+                                    stroke="rgba(167,139,250,0.3)" stroke-width="0.8" />
+                                <text x="240" y="184" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                    font-size="6">CARGO</text>
+                                <!-- Score bar -->
+                                <rect x="40" y="210" width="240" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
+                                <rect x="40" y="210" width="180" height="6" rx="3" fill="rgba(124,58,237,0.5)" />
+                                <text x="40" y="226" fill="rgba(167,139,250,0.7)" font-family="Fira Code"
+                                    font-size="7">SCORE:
+                                    0.82 / 1.0</text>
+                                <!-- Animated dot -->
+                                <circle r="3" fill="#a78bfa">
+                                    <animateMotion dur="2s" repeatCount="indefinite"
+                                        path="M160,120 L80,60 L240,60 L160,120" />
+                                    <animate attributeName="opacity" values="1;0.3;1" dur="2s"
+                                        repeatCount="indefinite" />
+                                </circle>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2: DropGen AI -->
+                    <div class="project-card reverse" id="project-2" style="cursor: pointer;">
+                        <div class="project-visual">
+                            <svg viewBox="0 0 320 240" width="100%" height="100%">
+                                <defs>
+                                    <radialGradient id="pg2" cx="50%" cy="30%" r="60%">
+                                        <stop offset="0%" stop-color="#2563eb" stop-opacity="0.12" />
+                                        <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                                <rect width="320" height="240" fill="url(#pg2)" />
+                                <!-- SaaS UI mockup -->
+                                <rect x="20" y="16" width="280" height="200" rx="8" fill="rgba(255,255,255,0.02)"
+                                    stroke="rgba(255,255,255,0.06)" stroke-width="0.8" />
+                                <rect x="20" y="16" width="280" height="28" rx="8" fill="rgba(37,99,235,0.1)" />
+                                <circle cx="38" cy="30" r="4" fill="rgba(96,165,250,0.3)" />
+                                <circle cx="52" cy="30" r="4" fill="rgba(96,165,250,0.15)" />
+                                <circle cx="66" cy="30" r="4" fill="rgba(96,165,250,0.08)" />
+                                <text x="160" y="34" text-anchor="middle" fill="rgba(96,165,250,0.6)"
+                                    font-family="Fira Code" font-size="7">DROPGEN AI — PRODUCT INTELLIGENCE</text>
+                                <!-- Trend chart bars -->
+                                <rect x="36" y="60" width="18" height="60" rx="3" fill="rgba(37,99,235,0.3)" />
+                                <rect x="62" y="75" width="18" height="45" rx="3" fill="rgba(37,99,235,0.25)" />
+                                <rect x="88" y="50" width="18" height="70" rx="3" fill="rgba(96,165,250,0.4)" />
+                                <rect x="114" y="65" width="18" height="55" rx="3" fill="rgba(37,99,235,0.3)" />
+                                <rect x="140" y="45" width="18" height="75" rx="3" fill="rgba(124,58,237,0.5)" />
+                                <text x="36" y="135" fill="rgba(255,255,255,0.2)" font-family="Fira Code"
+                                    font-size="6">Trend
+                                    Score</text>
+                                <!-- AI copy panel -->
+                                <rect x="180" y="52" width="110" height="120" rx="6" fill="rgba(124,58,237,0.06)"
+                                    stroke="rgba(167,139,250,0.15)" stroke-width="0.8" />
+                                <text x="196" y="68" fill="rgba(167,139,250,0.8)" font-family="Fira Code" font-size="6"
+                                    letter-spacing="0.08em">AI COPY GENERATOR</text>
+                                <rect x="192" y="76" width="86" height="5" rx="2" fill="rgba(255,255,255,0.08)" />
+                                <rect x="192" y="85" width="74" height="5" rx="2" fill="rgba(255,255,255,0.06)" />
+                                <rect x="192" y="94" width="80" height="5" rx="2" fill="rgba(255,255,255,0.06)" />
+                                <rect x="192" y="103" width="66" height="5" rx="2" fill="rgba(255,255,255,0.04)" />
+                                <rect x="192" y="115" width="78" height="16" rx="4" fill="rgba(124,58,237,0.3)"
+                                    stroke="rgba(167,139,250,0.3)" stroke-width="0.5" />
+                                <text x="231" y="126" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                    font-size="6">Generate →</text>
+                                <text x="192" y="155" fill="rgba(96,165,250,0.5)" font-family="Fira Code"
+                                    font-size="6">~70%
+                                    less research time</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="project-number">02 / 08</div>
+                            <div class="project-tag">AI SaaS Platform</div>
+                            <div class="project-title">DropGen AI</div>
+                            <p class="project-desc">AI-powered SaaS combining ML trend prediction with Llama 3 70B for
+                                automated multi-platform marketing copy and supplier sourcing — end-to-end intelligence
+                                for
+                                dropshippers.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <div class="metric-val">~70%</div>
+                                    <div class="metric-label">Research time saved</div>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span class="stack-pill">Groq API</span>
+                                <span class="stack-pill">Llama 3 70B</span>
+                                <span class="stack-pill">Angular</span>
+                                <span class="stack-pill">PostgreSQL</span>
+                                <span class="stack-pill">GCP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3: AI Outreach System -->
+                    <!-- PROJECT NEW: AI Outreach -->
+                    <div class="project-card">
+                        <div>
+                            <div class="project-number">03 / 08</div>
+                            <div class="project-tag">Automation · AI Outreach</div>
+                            <div class="project-title">AI-Powered Outreach System</div>
+                            <p class="project-desc">Autonomous AI outreach engine that discovers Google Maps leads,
+                                enriches
+                                hidden business emails through intelligent web extraction, and executes personalized
+                                cold
+                                outreach campaigns automatically.</p>
+                            <div class="project-metrics" style="flex-wrap: wrap; gap: 16px;">
+                                <div class="metric">
+                                    <div class="metric-val">10x</div>
+                                    <div class="metric-label">Faster Lead Gen</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-val">24/7</div>
+                                    <div class="metric-label">Autonomous Outreach</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-val">Zero</div>
+                                    <div class="metric-label">Manual Lead Prospecting</div>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span class="stack-pill">n8n</span>
+                                <span class="stack-pill">Apify</span>
+                                <span class="stack-pill">JavaScript</span>
+                                <span class="stack-pill">Google Sheets</span>
+                                <span class="stack-pill">Gmail API</span>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <svg viewBox="0 0 320 240" width="100%" height="100%">
+                                <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
+
+                                <!-- Google Maps -->
+                                <rect x="80" y="25" width="160" height="26" rx="4" fill="rgba(255,255,255,0.03)"
+                                    stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                                <text x="160" y="42" text-anchor="middle" fill="rgba(255,255,255,0.7)"
+                                    font-family="Fira Code" font-size="9">Google Maps</text>
+
+                                <path d="M160,51 L160,65" stroke="rgba(167,139,250,0.5)" stroke-width="1.5"
+                                    stroke-dasharray="2 2" marker-end="url(#arrow)" />
+
+                                <!-- Apify Scraper -->
+                                <rect x="80" y="65" width="160" height="26" rx="4" fill="rgba(124,58,237,0.1)"
+                                    stroke="rgba(167,139,250,0.3)" stroke-width="1" />
+                                <text x="160" y="82" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                    font-size="9">Apify Scraper</text>
+
+                                <path d="M160,91 L160,105" stroke="rgba(167,139,250,0.5)" stroke-width="1.5"
+                                    stroke-dasharray="2 2" marker-end="url(#arrow)" />
+
+                                <!-- Email Extraction -->
+                                <rect x="80" y="105" width="160" height="26" rx="4" fill="rgba(37,99,235,0.1)"
+                                    stroke="rgba(96,165,250,0.3)" stroke-width="1" />
+                                <text x="160" y="122" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                    font-size="9">Email Extraction</text>
+
+                                <path d="M160,131 L160,145" stroke="rgba(167,139,250,0.5)" stroke-width="1.5"
+                                    stroke-dasharray="2 2" marker-end="url(#arrow)" />
+
+                                <!-- AI Outreach Engine -->
+                                <rect x="80" y="145" width="160" height="26" rx="4" fill="rgba(16,185,129,0.1)"
+                                    stroke="rgba(16,185,129,0.3)" stroke-width="1" />
+                                <text x="160" y="162" text-anchor="middle" fill="#34d399" font-family="Fira Code"
+                                    font-size="9">AI Outreach Engine</text>
+
+                                <path d="M160,171 L160,185" stroke="rgba(167,139,250,0.5)" stroke-width="1.5"
+                                    stroke-dasharray="2 2" marker-end="url(#arrow)" />
+
+                                <!-- CRM Logging -->
+                                <rect x="80" y="185" width="160" height="26" rx="4" fill="rgba(245,158,11,0.1)"
+                                    stroke="rgba(252,211,77,0.3)" stroke-width="1" />
+                                <text x="160" y="202" text-anchor="middle" fill="#fbbf24" font-family="Fira Code"
+                                    font-size="9">CRM Logging</text>
+
+                                <defs>
+                                    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4"
+                                        markerHeight="4" orient="auto">
+                                        <path d="M0,0 L10,5 L0,10 z" fill="rgba(167,139,250,0.5)" />
+                                    </marker>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div><!-- PROJECT 3: Client Onboarding Automation -->
+                    <div class="project-card reverse">
+                        <div>
+                            <div class="project-number">04 / 08</div>
+                            <div class="project-tag">Freelance · Shipped</div>
+                            <div class="project-title">Client Onboarding Automation</div>
+                            <p class="project-desc">End-to-end automation for a paying client: webhook triggers, n8n
+                                validation, OpenAI enrichment, admin dashboard with Telegram alerts for one-click
+                                accept/reject workflow.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <div class="metric-val">~30%</div>
+                                    <div class="metric-label">Admin overhead cut</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-val">0</div>
+                                    <div class="metric-label">Manual data chasing</div>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span class="stack-pill">n8n</span>
+                                <span class="stack-pill">OpenAI API</span>
+                                <span class="stack-pill">Webhooks</span>
+                                <span class="stack-pill">Telegram Bot</span>
+                                <span class="stack-pill">Excel</span>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <svg viewBox="0 0 320 240" width="100%" height="100%">
+                                <defs>
+                                    <radialGradient id="pg3" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.1" />
+                                        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                                <rect width="320" height="240" fill="url(#pg3)" />
+                                <!-- Pipeline flow -->
+                                <rect x="16" y="100" width="68" height="32" rx="7" fill="rgba(37,99,235,0.12)"
+                                    stroke="rgba(96,165,250,0.3)" stroke-width="0.8" />
+                                <text x="50" y="113" text-anchor="middle" fill="rgba(96,165,250,0.9)"
+                                    font-family="Fira Code" font-size="6.5" letter-spacing="0.05em">WEBHOOK</text>
+                                <text x="50" y="124" text-anchor="middle" fill="rgba(96,165,250,0.5)"
+                                    font-family="Fira Code" font-size="5.5">TRIGGER</text>
+                                <line x1="84" y1="116" x2="100" y2="116" stroke="rgba(167,139,250,0.4)" stroke-width="1"
+                                    marker-end="url(#aw)" />
+                                <defs>
+                                    <marker id="aw" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4"
+                                        orient="auto">
+                                        <path d="M1 1L5 3L1 5" fill="none" stroke="rgba(167,139,250,0.6)"
+                                            stroke-width="1.2" />
+                                    </marker>
+                                </defs>
+
+                                <rect x="100" y="100" width="60" height="32" rx="7" fill="rgba(124,58,237,0.12)"
+                                    stroke="rgba(167,139,250,0.3)" stroke-width="0.8" />
+                                <text x="130" y="113" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                    font-size="6.5">N8N</text>
+                                <text x="130" y="124" text-anchor="middle" fill="rgba(167,139,250,0.5)"
+                                    font-family="Fira Code" font-size="5.5">VALIDATE</text>
+                                <line x1="160" y1="116" x2="176" y2="116" stroke="rgba(167,139,250,0.4)"
+                                    stroke-width="1" marker-end="url(#aw)" />
+
+                                <rect x="176" y="100" width="64" height="32" rx="7" fill="rgba(37,99,235,0.1)"
+                                    stroke="rgba(96,165,250,0.25)" stroke-width="0.8" />
+                                <text x="208" y="113" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                    font-size="6.5">OPENAI</text>
+                                <text x="208" y="124" text-anchor="middle" fill="rgba(96,165,250,0.5)"
+                                    font-family="Fira Code" font-size="5.5">ENRICH</text>
+                                <line x1="240" y1="116" x2="256" y2="116" stroke="rgba(167,139,250,0.4)"
+                                    stroke-width="1" marker-end="url(#aw)" />
+
+                                <rect x="256" y="100" width="52" height="32" rx="7" fill="rgba(255,255,255,0.03)"
+                                    stroke="rgba(255,255,255,0.1)" stroke-width="0.8" />
+                                <text x="282" y="113" text-anchor="middle" fill="rgba(255,255,255,0.4)"
+                                    font-family="Fira Code" font-size="6.5">DASH</text>
+                                <text x="282" y="124" text-anchor="middle" fill="rgba(255,255,255,0.25)"
+                                    font-family="Fira Code" font-size="5.5">ADMIN</text>
+
+                                <!-- Telegram alert -->
+                                <line x1="282" y1="132" x2="282" y2="160" stroke="rgba(96,165,250,0.3)"
+                                    stroke-width="0.8" stroke-dasharray="3 3" />
+                                <rect x="240" y="160" width="84" height="44" rx="8" fill="rgba(37,99,235,0.08)"
+                                    stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
+                                <text x="282" y="178" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                    font-size="7">📱 TELEGRAM</text>
+                                <rect x="252" y="184" width="30" height="12" rx="3" fill="rgba(96,165,250,0.2)" />
+                                <text x="267" y="193" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                    font-size="6">Accept</text>
+                                <rect x="286" y="184" width="26" height="12" rx="3" fill="rgba(239,68,68,0.15)" />
+                                <text x="299" y="193" text-anchor="middle" fill="rgba(239,68,68,0.8)"
+                                    font-family="Fira Code" font-size="6">Reject</text>
+
+                                <!-- Animated flow particle -->
+                                <circle r="2.5" fill="#a78bfa" opacity="0.9">
+                                    <animateMotion dur="2.5s" repeatCount="indefinite"
+                                        path="M50,116 L130,116 L208,116 L282,116" />
+                                    <animate attributeName="opacity" values="0;1;1;0" dur="2.5s"
+                                        repeatCount="indefinite" />
+                                </circle>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 4: Truck Management Portal -->
+                    <div class="project-card">
+                        <div class="project-visual">
+                            <svg viewBox="0 0 320 240" width="100%" height="100%">
+                                <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
+                                <!-- Dashboard -->
+                                <rect x="16" y="16" width="290" height="20" rx="5" fill="rgba(255,255,255,0.02)"
+                                    stroke="rgba(255,255,255,0.05)" stroke-width="0.5" />
+                                <text x="30" y="29" fill="rgba(255,255,255,0.25)" font-family="Fira Code" font-size="6"
+                                    letter-spacing="0.08em">TRUCK MANAGEMENT PORTAL · ALLCARGO</text>
+                                <!-- Stats row -->
+                                <rect x="16" y="44" width="62" height="42" rx="6" fill="rgba(124,58,237,0.1)"
+                                    stroke="rgba(167,139,250,0.2)" stroke-width="0.5" />
+                                <text x="47" y="59" text-anchor="middle" fill="#a78bfa" font-family="Space Grotesk"
+                                    font-size="14" font-weight="700">50+</text>
+                                <text x="47" y="72" text-anchor="middle" fill="rgba(167,139,250,0.5)"
+                                    font-family="Fira Code" font-size="5.5">TRANSPORTERS</text>
+                                <rect x="86" y="44" width="62" height="42" rx="6" fill="rgba(37,99,235,0.08)"
+                                    stroke="rgba(96,165,250,0.15)" stroke-width="0.5" />
+                                <text x="117" y="59" text-anchor="middle" fill="#60a5fa" font-family="Space Grotesk"
+                                    font-size="14" font-weight="700">40%</text>
+                                <text x="117" y="72" text-anchor="middle" fill="rgba(96,165,250,0.5)"
+                                    font-family="Fira Code" font-size="5.5">TIME SAVED</text>
+                                <rect x="156" y="44" width="62" height="42" rx="6" fill="rgba(16,185,129,0.08)"
+                                    stroke="rgba(16,185,129,0.2)" stroke-width="0.5" />
+                                <text x="187" y="59" text-anchor="middle" fill="rgba(16,185,129,0.9)"
+                                    font-family="Space Grotesk" font-size="14" font-weight="700">35%</text>
+                                <text x="187" y="72" text-anchor="middle" fill="rgba(16,185,129,0.5)"
+                                    font-family="Fira Code" font-size="5.5">QUERY SPEED</text>
+                                <rect x="226" y="44" width="78" height="42" rx="6" fill="rgba(255,255,255,0.02)"
+                                    stroke="rgba(255,255,255,0.06)" stroke-width="0.5" />
+                                <text x="265" y="59" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                                    font-family="Space Grotesk" font-size="14" font-weight="700">25%</text>
+                                <text x="265" y="72" text-anchor="middle" fill="rgba(255,255,255,0.25)"
+                                    font-family="Fira Code" font-size="5.5">ON-TIME ↑</text>
+                                <!-- Schedule table -->
+                                <rect x="16" y="96" width="290" height="130" rx="6" fill="rgba(255,255,255,0.01)"
+                                    stroke="rgba(255,255,255,0.04)" stroke-width="0.5" />
+                                <text x="30" y="111" fill="rgba(255,255,255,0.2)" font-family="Fira Code" font-size="6"
+                                    letter-spacing="0.08em">SCHEDULE BOARD</text>
+                                <rect x="16" y="116" width="290" height="0.5" fill="rgba(255,255,255,0.05)" />
+                                <!-- Table rows -->
+                                <rect x="24" y="124" width="274" height="18" rx="3" fill="rgba(124,58,237,0.06)" />
+                                <text x="36" y="136" fill="rgba(167,139,250,0.8)" font-family="Fira Code"
+                                    font-size="6">MH-12
+                                    · Route A · Loading 09:00</text>
+                                <text x="244" y="136" fill="rgba(16,185,129,0.7)" font-family="Fira Code"
+                                    font-size="6">On
+                                    Time</text>
+                                <rect x="24" y="146" width="274" height="18" rx="3" fill="rgba(255,255,255,0.01)" />
+                                <text x="36" y="158" fill="rgba(255,255,255,0.35)" font-family="Fira Code"
+                                    font-size="6">GJ-01
+                                    · Route B · Depart 11:30</text>
+                                <text x="240" y="158" fill="rgba(96,165,250,0.7)" font-family="Fira Code"
+                                    font-size="6">Scheduled</text>
+                                <rect x="24" y="168" width="274" height="18" rx="3" fill="rgba(255,255,255,0.01)" />
+                                <text x="36" y="180" fill="rgba(255,255,255,0.35)" font-family="Fira Code"
+                                    font-size="6">KA-04
+                                    · Route C · Transit 14:00</text>
+                                <text x="236" y="180" fill="rgba(240,192,64,0.7)" font-family="Fira Code"
+                                    font-size="6">In
+                                    Transit</text>
+                                <rect x="24" y="190" width="274" height="18" rx="3" fill="rgba(255,255,255,0.01)" />
+                                <text x="36" y="202" fill="rgba(255,255,255,0.35)" font-family="Fira Code"
+                                    font-size="6">TN-08
+                                    · Route D · Arrive 16:45</text>
+                                <text x="244" y="202" fill="rgba(16,185,129,0.7)" font-family="Fira Code"
+                                    font-size="6">On
+                                    Time</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="project-number">05 / 08</div>
+                            <div class="project-tag">Enterprise · Production</div>
+                            <div class="project-title">Truck Management Portal</div>
+                            <p class="project-desc">Led end-to-end delivery of enterprise logistics portal at Allcargo.
+                                Onboarded 50+ transporters, optimized SQL stored procedures, configured Azure DevOps
+                                CI/CD
+                                pipelines.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <div class="metric-val">40%</div>
+                                    <div class="metric-label">Scheduling time cut</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-val">35%</div>
+                                    <div class="metric-label">Query time reduced</div>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span class="stack-pill">Angular</span>
+                                <span class="stack-pill">.NET</span>
+                                <span class="stack-pill">SQL Server</span>
+                                <span class="stack-pill">Azure DevOps</span>
+                                <span class="stack-pill">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 5: Skin Cancer Detection -->
+                    <div class="project-card reverse">
+                        <div>
+                            <div class="project-number">06 / 08</div>
+                            <div class="project-tag">Machine Learning · Computer Vision</div>
+                            <div class="project-title">Skin Cancer Detection</div>
+                            <p class="project-desc">Developed a Convolutional Neural Network (CNN) model using
+                                TensorFlow
+                                and Keras for image classification of dermatological conditions.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <div class="metric-val">86%</div>
+                                    <div class="metric-label">Accuracy</div>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span class="stack-pill">TensorFlow</span>
+                                <span class="stack-pill">Keras</span>
+                                <span class="stack-pill">CNN</span>
+                                <span class="stack-pill">Python</span>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <svg viewBox="0 0 320 240" width="100%" height="100%">
+                                <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
+                                <!-- Simple CNN representation -->
+                                <rect x="60" y="80" width="40" height="80" rx="4" fill="rgba(124,58,237,0.15)"
+                                    stroke="rgba(167,139,250,0.4)" stroke-width="0.8" />
+                                <rect x="120" y="90" width="30" height="60" rx="4" fill="rgba(96,165,250,0.15)"
+                                    stroke="rgba(96,165,250,0.4)" stroke-width="0.8" />
+                                <rect x="170" y="100" width="20" height="40" rx="4" fill="rgba(16,185,129,0.15)"
+                                    stroke="rgba(16,185,129,0.4)" stroke-width="0.8" />
+                                <circle cx="230" cy="110" r="6" fill="rgba(167,139,250,0.8)" />
+                                <circle cx="230" cy="130" r="6" fill="rgba(96,165,250,0.8)" />
+                                <!-- connecting lines -->
+                                <path d="M100,120 L120,120 M150,120 L170,120 M190,120 L220,110 M190,120 L220,130"
+                                    stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none" />
+                                <text x="160" y="180" text-anchor="middle" fill="rgba(255,255,255,0.4)"
+                                    font-family="Fira Code" font-size="8" letter-spacing="0.1em">CNN ARCHITECTURE</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 6: Paracassa WebApp -->
+                    <div class="project-card">
+                        <div class="project-visual">
+                            <svg viewBox="0 0 320 240" width="100%" height="100%">
+                                <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
+                                <!-- WebApp UI representation -->
+                                <rect x="40" y="40" width="240" height="160" rx="6" fill="rgba(255,255,255,0.02)"
+                                    stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                                <!-- Header -->
+                                <rect x="40" y="40" width="240" height="24" rx="6" fill="rgba(255,255,255,0.05)" />
+                                <circle cx="56" cy="52" r="3" fill="#ef4444" opacity="0.8" />
+                                <circle cx="66" cy="52" r="3" fill="#eab308" opacity="0.8" />
+                                <circle cx="76" cy="52" r="3" fill="#22c55e" opacity="0.8" />
+                                <!-- Body -->
+                                <rect x="60" y="80" width="80" height="60" rx="4" fill="rgba(124,58,237,0.1)" />
+                                <rect x="150" y="80" width="110" height="10" rx="2" fill="rgba(255,255,255,0.1)" />
+                                <rect x="150" y="100" width="90" height="8" rx="2" fill="rgba(255,255,255,0.05)" />
+                                <rect x="150" y="115" width="100" height="8" rx="2" fill="rgba(255,255,255,0.05)" />
+                                <rect x="150" y="135" width="40" height="14" rx="4" fill="rgba(96,165,250,0.2)" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="project-number">07 / 08</div>
+                            <div class="project-tag">Full Stack · E-Commerce</div>
+                            <div class="project-title">Paracassa WebApp</div>
+                            <p class="project-desc">Designed and developed a full-stack e-commerce platform integrating
+                                multi-modal UI components, form validation, and API testing.</p>
+                            <div class="project-stack">
+                                <span class="stack-pill">ReactJS</span>
+                                <span class="stack-pill">TypeScript</span>
+                                <span class="stack-pill">Node.js</span>
+                                <span class="stack-pill">Postman</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 7: Fake News Classification -->
+                    <div class="project-card reverse">
+                        <div>
+                            <div class="project-number">08 / 08</div>
+                            <div class="project-tag">NLP · Machine Learning</div>
+                            <div class="project-title">Fake News Classification</div>
+                            <p class="project-desc">Trained and tuned a Random Forest classifier enabling faster and
+                                more
+                                reliable misinformation detection using NLP techniques to analyze news headlines.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <div class="metric-val">92%</div>
+                                    <div class="metric-label">F1-Score</div>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span class="stack-pill">Scikit-learn</span>
+                                <span class="stack-pill">Random Forest</span>
+                                <span class="stack-pill">NLP</span>
+                                <span class="stack-pill">Python</span>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <svg viewBox="0 0 320 240" width="100%" height="100%">
+                                <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
+                                <!-- NLP / Forest representation -->
+                                <rect x="40" y="80" width="80" height="80" rx="6" fill="rgba(255,255,255,0.02)"
+                                    stroke="rgba(255,255,255,0.1)" />
+                                <text x="80" y="115" text-anchor="middle" fill="rgba(255,255,255,0.6)"
+                                    font-family="Fira Code" font-size="8">RAW TEXT</text>
+                                <path d="M120,120 L160,120" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"
+                                    stroke-dasharray="3 3" />
+                                <!-- Random Forest Tree nodes -->
+                                <circle cx="210" cy="80" r="12" fill="rgba(124,58,237,0.2)"
+                                    stroke="rgba(167,139,250,0.5)" />
+                                <circle cx="180" cy="120" r="10" fill="rgba(124,58,237,0.15)"
+                                    stroke="rgba(167,139,250,0.4)" />
+                                <circle cx="240" cy="120" r="10" fill="rgba(124,58,237,0.15)"
+                                    stroke="rgba(167,139,250,0.4)" />
+                                <circle cx="160" cy="160" r="8" fill="rgba(16,185,129,0.3)" />
+                                <circle cx="200" cy="160" r="8" fill="rgba(239,68,68,0.3)" />
+                                <path d="M210,92 L180,110 M210,92 L240,110 M180,130 L160,152 M180,130 L200,152"
+                                    stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <div class="project-grid">
+        <div class="glow-line"></div>
 
-                <!-- PROJECT 1: OpenEnv Logistics -->
-                <div class="project-card">
-                    <div>
-                        <div class="project-number">01 / 08</div>
-                        <div class="project-tag">🏆 Hackathon Finalist</div>
-                        <div class="project-title">OpenEnv Logistics</div>
-                        <p class="project-desc">A fully containerized RL environment to benchmark LLM-powered autonomous
-                            freight dispatchers against real-world supply chain tradeoffs. Built to survive adversarial
-                            30-minute grading pipelines.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-val">52K+</div>
-                                <div class="metric-label">Participants</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-val">0.0–1.0</div>
-                                <div class="metric-label">Grader precision</div>
-                            </div>
-                        </div>
-                        <div class="project-stack">
-                            <span class="stack-pill">Python</span>
-                            <span class="stack-pill">FastAPI</span>
-                            <span class="stack-pill">Docker</span>
-                            <span class="stack-pill">Pydantic</span>
-                            <span class="stack-pill">RL</span>
-                            <span class="stack-pill">Gemini API</span>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <svg viewBox="0 0 320 240" width="100%" height="100%">
-                            <defs>
-                                <radialGradient id="pg1" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.15" />
-                                    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
-                                </radialGradient>
-                            </defs>
-                            <rect width="320" height="240" fill="url(#pg1)" />
-                            <!-- Freight network graph -->
-                            <line x1="160" y1="120" x2="80" y2="60" stroke="rgba(167,139,250,0.3)" stroke-width="1"
-                                stroke-dasharray="3 3" />
-                            <line x1="160" y1="120" x2="240" y2="60" stroke="rgba(167,139,250,0.3)" stroke-width="1"
-                                stroke-dasharray="3 3" />
-                            <line x1="160" y1="120" x2="80" y2="180" stroke="rgba(96,165,250,0.2)" stroke-width="1"
-                                stroke-dasharray="3 3" />
-                            <line x1="160" y1="120" x2="240" y2="180" stroke="rgba(96,165,250,0.2)" stroke-width="1"
-                                stroke-dasharray="3 3" />
-                            <line x1="80" y1="60" x2="240" y2="60" stroke="rgba(167,139,250,0.15)" stroke-width="0.8" />
-                            <line x1="80" y1="180" x2="240" y2="180" stroke="rgba(96,165,250,0.15)"
-                                stroke-width="0.8" />
-                            <!-- Nodes -->
-                            <circle cx="160" cy="120" r="22" fill="rgba(124,58,237,0.2)" stroke="rgba(167,139,250,0.5)"
-                                stroke-width="1" />
-                            <text x="160" y="116" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                                font-size="7" letter-spacing="0.05em">DISPATCHER</text>
-                            <text x="160" y="127" text-anchor="middle" fill="rgba(167,139,250,0.6)"
-                                font-family="DM Mono" font-size="6">LLM AGENT</text>
-                            <circle cx="80" cy="60" r="14" fill="rgba(37,99,235,0.15)" stroke="rgba(96,165,250,0.4)"
-                                stroke-width="0.8" />
-                            <text x="80" y="64" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                                font-size="6">PORT A</text>
-                            <circle cx="240" cy="60" r="14" fill="rgba(37,99,235,0.15)" stroke="rgba(96,165,250,0.4)"
-                                stroke-width="0.8" />
-                            <text x="240" y="64" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                                font-size="6">PORT B</text>
-                            <circle cx="80" cy="180" r="14" fill="rgba(124,58,237,0.1)" stroke="rgba(167,139,250,0.3)"
-                                stroke-width="0.8" />
-                            <text x="80" y="184" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                                font-size="6">DEPOT</text>
-                            <circle cx="240" cy="180" r="14" fill="rgba(124,58,237,0.1)" stroke="rgba(167,139,250,0.3)"
-                                stroke-width="0.8" />
-                            <text x="240" y="184" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                                font-size="6">CARGO</text>
-                            <!-- Score bar -->
-                            <rect x="40" y="210" width="240" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-                            <rect x="40" y="210" width="180" height="6" rx="3" fill="rgba(124,58,237,0.5)" />
-                            <text x="40" y="226" fill="rgba(167,139,250,0.7)" font-family="DM Mono" font-size="7">SCORE:
-                                0.82 / 1.0</text>
-                            <!-- Animated dot -->
-                            <circle r="3" fill="#a78bfa">
-                                <animateMotion dur="2s" repeatCount="indefinite"
-                                    path="M160,120 L80,60 L240,60 L160,120" />
-                                <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
-                            </circle>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- PROJECT 2: DropGen AI -->
-                <div class="project-card reverse">
-                    <div class="project-visual">
-                        <svg viewBox="0 0 320 240" width="100%" height="100%">
-                            <defs>
-                                <radialGradient id="pg2" cx="50%" cy="30%" r="60%">
-                                    <stop offset="0%" stop-color="#2563eb" stop-opacity="0.12" />
-                                    <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
-                                </radialGradient>
-                            </defs>
-                            <rect width="320" height="240" fill="url(#pg2)" />
-                            <!-- SaaS UI mockup -->
-                            <rect x="20" y="16" width="280" height="200" rx="8" fill="rgba(255,255,255,0.02)"
-                                stroke="rgba(255,255,255,0.06)" stroke-width="0.8" />
-                            <rect x="20" y="16" width="280" height="28" rx="8" fill="rgba(37,99,235,0.1)" />
-                            <circle cx="38" cy="30" r="4" fill="rgba(96,165,250,0.3)" />
-                            <circle cx="52" cy="30" r="4" fill="rgba(96,165,250,0.15)" />
-                            <circle cx="66" cy="30" r="4" fill="rgba(96,165,250,0.08)" />
-                            <text x="160" y="34" text-anchor="middle" fill="rgba(96,165,250,0.6)" font-family="DM Mono"
-                                font-size="7">DROPGEN AI — PRODUCT INTELLIGENCE</text>
-                            <!-- Trend chart bars -->
-                            <rect x="36" y="60" width="18" height="60" rx="3" fill="rgba(37,99,235,0.3)" />
-                            <rect x="62" y="75" width="18" height="45" rx="3" fill="rgba(37,99,235,0.25)" />
-                            <rect x="88" y="50" width="18" height="70" rx="3" fill="rgba(96,165,250,0.4)" />
-                            <rect x="114" y="65" width="18" height="55" rx="3" fill="rgba(37,99,235,0.3)" />
-                            <rect x="140" y="45" width="18" height="75" rx="3" fill="rgba(124,58,237,0.5)" />
-                            <text x="36" y="135" fill="rgba(255,255,255,0.2)" font-family="DM Mono" font-size="6">Trend
-                                Score</text>
-                            <!-- AI copy panel -->
-                            <rect x="180" y="52" width="110" height="120" rx="6" fill="rgba(124,58,237,0.06)"
-                                stroke="rgba(167,139,250,0.15)" stroke-width="0.8" />
-                            <text x="196" y="68" fill="rgba(167,139,250,0.8)" font-family="DM Mono" font-size="6"
-                                letter-spacing="0.08em">AI COPY GENERATOR</text>
-                            <rect x="192" y="76" width="86" height="5" rx="2" fill="rgba(255,255,255,0.08)" />
-                            <rect x="192" y="85" width="74" height="5" rx="2" fill="rgba(255,255,255,0.06)" />
-                            <rect x="192" y="94" width="80" height="5" rx="2" fill="rgba(255,255,255,0.06)" />
-                            <rect x="192" y="103" width="66" height="5" rx="2" fill="rgba(255,255,255,0.04)" />
-                            <rect x="192" y="115" width="78" height="16" rx="4" fill="rgba(124,58,237,0.3)"
-                                stroke="rgba(167,139,250,0.3)" stroke-width="0.5" />
-                            <text x="231" y="126" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                                font-size="6">Generate →</text>
-                            <text x="192" y="155" fill="rgba(96,165,250,0.5)" font-family="DM Mono" font-size="6">~70%
-                                less research time</text>
-                        </svg>
-                    </div>
-                    <div>
-                        <div class="project-number">02 / 08</div>
-                        <div class="project-tag">AI SaaS Platform</div>
-                        <div class="project-title">DropGen AI</div>
-                        <p class="project-desc">AI-powered SaaS combining ML trend prediction with Llama 3 70B for
-                            automated multi-platform marketing copy and supplier sourcing — end-to-end intelligence for
-                            dropshippers.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-val">~70%</div>
-                                <div class="metric-label">Research time saved</div>
-                            </div>
-                        </div>
-                        <div class="project-stack">
-                            <span class="stack-pill">Groq API</span>
-                            <span class="stack-pill">Llama 3 70B</span>
-                            <span class="stack-pill">Angular</span>
-                            <span class="stack-pill">PostgreSQL</span>
-                            <span class="stack-pill">GCP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 3: AI Outreach System -->
-                <!-- PROJECT NEW: AI Outreach -->
-                <div class="project-card">
-                    <div>
-                        <div class="project-number">03 / 08</div>
-                        <div class="project-tag">Automation · AI Outreach</div>
-                        <div class="project-title">AI-Powered Outreach System</div>
-                        <p class="project-desc">Autonomous AI outreach engine that discovers Google Maps leads, enriches
-                            hidden business emails through intelligent web extraction, and executes personalized cold
-                            outreach campaigns automatically.</p>
-                        <div class="project-metrics" style="flex-wrap: wrap; gap: 16px;">
-                            <div class="metric">
-                                <div class="metric-val">10x</div>
-                                <div class="metric-label">Faster Lead Gen</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-val">24/7</div>
-                                <div class="metric-label">Autonomous Outreach</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-val">Zero</div>
-                                <div class="metric-label">Manual Lead Prospecting</div>
-                            </div>
-                        </div>
-                        <div class="project-stack">
-                            <span class="stack-pill">n8n</span>
-                            <span class="stack-pill">Apify</span>
-                            <span class="stack-pill">JavaScript</span>
-                            <span class="stack-pill">Google Sheets</span>
-                            <span class="stack-pill">Gmail API</span>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <svg viewBox="0 0 320 240" width="100%" height="100%">
-                            <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
-
-                            <!-- Google Maps -->
-                            <rect x="80" y="25" width="160" height="26" rx="4" fill="rgba(255,255,255,0.03)"
-                                stroke="rgba(255,255,255,0.1)" stroke-width="1" />
-                            <text x="160" y="42" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="DM Mono"
-                                font-size="9">Google Maps</text>
-
-                            <path d="M160,51 L160,65" stroke="rgba(167,139,250,0.5)" stroke-width="1.5"
-                                stroke-dasharray="2 2" marker-end="url(#arrow)" />
-
-                            <!-- Apify Scraper -->
-                            <rect x="80" y="65" width="160" height="26" rx="4" fill="rgba(124,58,237,0.1)"
-                                stroke="rgba(167,139,250,0.3)" stroke-width="1" />
-                            <text x="160" y="82" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                                font-size="9">Apify Scraper</text>
-
-                            <path d="M160,91 L160,105" stroke="rgba(167,139,250,0.5)" stroke-width="1.5"
-                                stroke-dasharray="2 2" marker-end="url(#arrow)" />
-
-                            <!-- Email Extraction -->
-                            <rect x="80" y="105" width="160" height="26" rx="4" fill="rgba(37,99,235,0.1)"
-                                stroke="rgba(96,165,250,0.3)" stroke-width="1" />
-                            <text x="160" y="122" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                                font-size="9">Email Extraction</text>
-
-                            <path d="M160,131 L160,145" stroke="rgba(167,139,250,0.5)" stroke-width="1.5"
-                                stroke-dasharray="2 2" marker-end="url(#arrow)" />
-
-                            <!-- AI Outreach Engine -->
-                            <rect x="80" y="145" width="160" height="26" rx="4" fill="rgba(16,185,129,0.1)"
-                                stroke="rgba(16,185,129,0.3)" stroke-width="1" />
-                            <text x="160" y="162" text-anchor="middle" fill="#34d399" font-family="DM Mono"
-                                font-size="9">AI Outreach Engine</text>
-
-                            <path d="M160,171 L160,185" stroke="rgba(167,139,250,0.5)" stroke-width="1.5"
-                                stroke-dasharray="2 2" marker-end="url(#arrow)" />
-
-                            <!-- CRM Logging -->
-                            <rect x="80" y="185" width="160" height="26" rx="4" fill="rgba(245,158,11,0.1)"
-                                stroke="rgba(252,211,77,0.3)" stroke-width="1" />
-                            <text x="160" y="202" text-anchor="middle" fill="#fbbf24" font-family="DM Mono"
-                                font-size="9">CRM Logging</text>
-
-                            <defs>
-                                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4"
-                                    markerHeight="4" orient="auto">
-                                    <path d="M0,0 L10,5 L0,10 z" fill="rgba(167,139,250,0.5)" />
-                                </marker>
-                            </defs>
-                        </svg>
-                    </div>
-                </div><!-- PROJECT 3: Client Onboarding Automation -->
-                <div class="project-card reverse">
-                    <div>
-                        <div class="project-number">04 / 08</div>
-                        <div class="project-tag">Freelance · Shipped</div>
-                        <div class="project-title">Client Onboarding Automation</div>
-                        <p class="project-desc">End-to-end automation for a paying client: webhook triggers, n8n
-                            validation, OpenAI enrichment, admin dashboard with Telegram alerts for one-click
-                            accept/reject workflow.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-val">~30%</div>
-                                <div class="metric-label">Admin overhead cut</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-val">0</div>
-                                <div class="metric-label">Manual data chasing</div>
-                            </div>
-                        </div>
-                        <div class="project-stack">
-                            <span class="stack-pill">n8n</span>
-                            <span class="stack-pill">OpenAI API</span>
-                            <span class="stack-pill">Webhooks</span>
-                            <span class="stack-pill">Telegram Bot</span>
-                            <span class="stack-pill">Excel</span>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <svg viewBox="0 0 320 240" width="100%" height="100%">
-                            <defs>
-                                <radialGradient id="pg3" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.1" />
-                                    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
-                                </radialGradient>
-                            </defs>
-                            <rect width="320" height="240" fill="url(#pg3)" />
-                            <!-- Pipeline flow -->
-                            <rect x="16" y="100" width="68" height="32" rx="7" fill="rgba(37,99,235,0.12)"
-                                stroke="rgba(96,165,250,0.3)" stroke-width="0.8" />
-                            <text x="50" y="113" text-anchor="middle" fill="rgba(96,165,250,0.9)" font-family="DM Mono"
-                                font-size="6.5" letter-spacing="0.05em">WEBHOOK</text>
-                            <text x="50" y="124" text-anchor="middle" fill="rgba(96,165,250,0.5)" font-family="DM Mono"
-                                font-size="5.5">TRIGGER</text>
-                            <line x1="84" y1="116" x2="100" y2="116" stroke="rgba(167,139,250,0.4)" stroke-width="1"
-                                marker-end="url(#aw)" />
-                            <defs>
-                                <marker id="aw" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4"
-                                    orient="auto">
-                                    <path d="M1 1L5 3L1 5" fill="none" stroke="rgba(167,139,250,0.6)"
-                                        stroke-width="1.2" />
-                                </marker>
-                            </defs>
-
-                            <rect x="100" y="100" width="60" height="32" rx="7" fill="rgba(124,58,237,0.12)"
-                                stroke="rgba(167,139,250,0.3)" stroke-width="0.8" />
-                            <text x="130" y="113" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                                font-size="6.5">N8N</text>
-                            <text x="130" y="124" text-anchor="middle" fill="rgba(167,139,250,0.5)"
-                                font-family="DM Mono" font-size="5.5">VALIDATE</text>
-                            <line x1="160" y1="116" x2="176" y2="116" stroke="rgba(167,139,250,0.4)" stroke-width="1"
-                                marker-end="url(#aw)" />
-
-                            <rect x="176" y="100" width="64" height="32" rx="7" fill="rgba(37,99,235,0.1)"
-                                stroke="rgba(96,165,250,0.25)" stroke-width="0.8" />
-                            <text x="208" y="113" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                                font-size="6.5">OPENAI</text>
-                            <text x="208" y="124" text-anchor="middle" fill="rgba(96,165,250,0.5)" font-family="DM Mono"
-                                font-size="5.5">ENRICH</text>
-                            <line x1="240" y1="116" x2="256" y2="116" stroke="rgba(167,139,250,0.4)" stroke-width="1"
-                                marker-end="url(#aw)" />
-
-                            <rect x="256" y="100" width="52" height="32" rx="7" fill="rgba(255,255,255,0.03)"
-                                stroke="rgba(255,255,255,0.1)" stroke-width="0.8" />
-                            <text x="282" y="113" text-anchor="middle" fill="rgba(255,255,255,0.4)"
-                                font-family="DM Mono" font-size="6.5">DASH</text>
-                            <text x="282" y="124" text-anchor="middle" fill="rgba(255,255,255,0.25)"
-                                font-family="DM Mono" font-size="5.5">ADMIN</text>
-
-                            <!-- Telegram alert -->
-                            <line x1="282" y1="132" x2="282" y2="160" stroke="rgba(96,165,250,0.3)" stroke-width="0.8"
-                                stroke-dasharray="3 3" />
-                            <rect x="240" y="160" width="84" height="44" rx="8" fill="rgba(37,99,235,0.08)"
-                                stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
-                            <text x="282" y="178" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                                font-size="7">📱 TELEGRAM</text>
-                            <rect x="252" y="184" width="30" height="12" rx="3" fill="rgba(96,165,250,0.2)" />
-                            <text x="267" y="193" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                                font-size="6">Accept</text>
-                            <rect x="286" y="184" width="26" height="12" rx="3" fill="rgba(239,68,68,0.15)" />
-                            <text x="299" y="193" text-anchor="middle" fill="rgba(239,68,68,0.8)" font-family="DM Mono"
-                                font-size="6">Reject</text>
-
-                            <!-- Animated flow particle -->
-                            <circle r="2.5" fill="#a78bfa" opacity="0.9">
-                                <animateMotion dur="2.5s" repeatCount="indefinite"
-                                    path="M50,116 L130,116 L208,116 L282,116" />
-                                <animate attributeName="opacity" values="0;1;1;0" dur="2.5s" repeatCount="indefinite" />
-                            </circle>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- PROJECT 4: Truck Management Portal -->
-                <div class="project-card">
-                    <div class="project-visual">
-                        <svg viewBox="0 0 320 240" width="100%" height="100%">
-                            <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
-                            <!-- Dashboard -->
-                            <rect x="16" y="16" width="290" height="20" rx="5" fill="rgba(255,255,255,0.02)"
-                                stroke="rgba(255,255,255,0.05)" stroke-width="0.5" />
-                            <text x="30" y="29" fill="rgba(255,255,255,0.25)" font-family="DM Mono" font-size="6"
-                                letter-spacing="0.08em">TRUCK MANAGEMENT PORTAL · ALLCARGO</text>
-                            <!-- Stats row -->
-                            <rect x="16" y="44" width="62" height="42" rx="6" fill="rgba(124,58,237,0.1)"
-                                stroke="rgba(167,139,250,0.2)" stroke-width="0.5" />
-                            <text x="47" y="59" text-anchor="middle" fill="#a78bfa" font-family="Syne" font-size="14"
-                                font-weight="700">50+</text>
-                            <text x="47" y="72" text-anchor="middle" fill="rgba(167,139,250,0.5)" font-family="DM Mono"
-                                font-size="5.5">TRANSPORTERS</text>
-                            <rect x="86" y="44" width="62" height="42" rx="6" fill="rgba(37,99,235,0.08)"
-                                stroke="rgba(96,165,250,0.15)" stroke-width="0.5" />
-                            <text x="117" y="59" text-anchor="middle" fill="#60a5fa" font-family="Syne" font-size="14"
-                                font-weight="700">40%</text>
-                            <text x="117" y="72" text-anchor="middle" fill="rgba(96,165,250,0.5)" font-family="DM Mono"
-                                font-size="5.5">TIME SAVED</text>
-                            <rect x="156" y="44" width="62" height="42" rx="6" fill="rgba(16,185,129,0.08)"
-                                stroke="rgba(16,185,129,0.2)" stroke-width="0.5" />
-                            <text x="187" y="59" text-anchor="middle" fill="rgba(16,185,129,0.9)" font-family="Syne"
-                                font-size="14" font-weight="700">35%</text>
-                            <text x="187" y="72" text-anchor="middle" fill="rgba(16,185,129,0.5)" font-family="DM Mono"
-                                font-size="5.5">QUERY SPEED</text>
-                            <rect x="226" y="44" width="78" height="42" rx="6" fill="rgba(255,255,255,0.02)"
-                                stroke="rgba(255,255,255,0.06)" stroke-width="0.5" />
-                            <text x="265" y="59" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Syne"
-                                font-size="14" font-weight="700">25%</text>
-                            <text x="265" y="72" text-anchor="middle" fill="rgba(255,255,255,0.25)"
-                                font-family="DM Mono" font-size="5.5">ON-TIME ↑</text>
-                            <!-- Schedule table -->
-                            <rect x="16" y="96" width="290" height="130" rx="6" fill="rgba(255,255,255,0.01)"
-                                stroke="rgba(255,255,255,0.04)" stroke-width="0.5" />
-                            <text x="30" y="111" fill="rgba(255,255,255,0.2)" font-family="DM Mono" font-size="6"
-                                letter-spacing="0.08em">SCHEDULE BOARD</text>
-                            <rect x="16" y="116" width="290" height="0.5" fill="rgba(255,255,255,0.05)" />
-                            <!-- Table rows -->
-                            <rect x="24" y="124" width="274" height="18" rx="3" fill="rgba(124,58,237,0.06)" />
-                            <text x="36" y="136" fill="rgba(167,139,250,0.8)" font-family="DM Mono" font-size="6">MH-12
-                                · Route A · Loading 09:00</text>
-                            <text x="244" y="136" fill="rgba(16,185,129,0.7)" font-family="DM Mono" font-size="6">On
-                                Time</text>
-                            <rect x="24" y="146" width="274" height="18" rx="3" fill="rgba(255,255,255,0.01)" />
-                            <text x="36" y="158" fill="rgba(255,255,255,0.35)" font-family="DM Mono" font-size="6">GJ-01
-                                · Route B · Depart 11:30</text>
-                            <text x="240" y="158" fill="rgba(96,165,250,0.7)" font-family="DM Mono"
-                                font-size="6">Scheduled</text>
-                            <rect x="24" y="168" width="274" height="18" rx="3" fill="rgba(255,255,255,0.01)" />
-                            <text x="36" y="180" fill="rgba(255,255,255,0.35)" font-family="DM Mono" font-size="6">KA-04
-                                · Route C · Transit 14:00</text>
-                            <text x="236" y="180" fill="rgba(240,192,64,0.7)" font-family="DM Mono" font-size="6">In
-                                Transit</text>
-                            <rect x="24" y="190" width="274" height="18" rx="3" fill="rgba(255,255,255,0.01)" />
-                            <text x="36" y="202" fill="rgba(255,255,255,0.35)" font-family="DM Mono" font-size="6">TN-08
-                                · Route D · Arrive 16:45</text>
-                            <text x="244" y="202" fill="rgba(16,185,129,0.7)" font-family="DM Mono" font-size="6">On
-                                Time</text>
-                        </svg>
-                    </div>
-                    <div>
-                        <div class="project-number">05 / 08</div>
-                        <div class="project-tag">Enterprise · Production</div>
-                        <div class="project-title">Truck Management Portal</div>
-                        <p class="project-desc">Led end-to-end delivery of enterprise logistics portal at Allcargo.
-                            Onboarded 50+ transporters, optimized SQL stored procedures, configured Azure DevOps CI/CD
-                            pipelines.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-val">40%</div>
-                                <div class="metric-label">Scheduling time cut</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-val">35%</div>
-                                <div class="metric-label">Query time reduced</div>
-                            </div>
-                        </div>
-                        <div class="project-stack">
-                            <span class="stack-pill">Angular</span>
-                            <span class="stack-pill">.NET</span>
-                            <span class="stack-pill">SQL Server</span>
-                            <span class="stack-pill">Azure DevOps</span>
-                            <span class="stack-pill">REST API</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 5: Skin Cancer Detection -->
-                <div class="project-card reverse">
-                    <div>
-                        <div class="project-number">06 / 08</div>
-                        <div class="project-tag">Machine Learning · Computer Vision</div>
-                        <div class="project-title">Skin Cancer Detection</div>
-                        <p class="project-desc">Developed a Convolutional Neural Network (CNN) model using TensorFlow
-                            and Keras for image classification of dermatological conditions.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-val">86%</div>
-                                <div class="metric-label">Accuracy</div>
-                            </div>
-                        </div>
-                        <div class="project-stack">
-                            <span class="stack-pill">TensorFlow</span>
-                            <span class="stack-pill">Keras</span>
-                            <span class="stack-pill">CNN</span>
-                            <span class="stack-pill">Python</span>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <svg viewBox="0 0 320 240" width="100%" height="100%">
-                            <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
-                            <!-- Simple CNN representation -->
-                            <rect x="60" y="80" width="40" height="80" rx="4" fill="rgba(124,58,237,0.15)"
-                                stroke="rgba(167,139,250,0.4)" stroke-width="0.8" />
-                            <rect x="120" y="90" width="30" height="60" rx="4" fill="rgba(96,165,250,0.15)"
-                                stroke="rgba(96,165,250,0.4)" stroke-width="0.8" />
-                            <rect x="170" y="100" width="20" height="40" rx="4" fill="rgba(16,185,129,0.15)"
-                                stroke="rgba(16,185,129,0.4)" stroke-width="0.8" />
-                            <circle cx="230" cy="110" r="6" fill="rgba(167,139,250,0.8)" />
-                            <circle cx="230" cy="130" r="6" fill="rgba(96,165,250,0.8)" />
-                            <!-- connecting lines -->
-                            <path d="M100,120 L120,120 M150,120 L170,120 M190,120 L220,110 M190,120 L220,130"
-                                stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none" />
-                            <text x="160" y="180" text-anchor="middle" fill="rgba(255,255,255,0.4)"
-                                font-family="DM Mono" font-size="8" letter-spacing="0.1em">CNN ARCHITECTURE</text>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- PROJECT 6: Paracassa WebApp -->
-                <div class="project-card">
-                    <div class="project-visual">
-                        <svg viewBox="0 0 320 240" width="100%" height="100%">
-                            <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
-                            <!-- WebApp UI representation -->
-                            <rect x="40" y="40" width="240" height="160" rx="6" fill="rgba(255,255,255,0.02)"
-                                stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-                            <!-- Header -->
-                            <rect x="40" y="40" width="240" height="24" rx="6" fill="rgba(255,255,255,0.05)" />
-                            <circle cx="56" cy="52" r="3" fill="#ef4444" opacity="0.8" />
-                            <circle cx="66" cy="52" r="3" fill="#eab308" opacity="0.8" />
-                            <circle cx="76" cy="52" r="3" fill="#22c55e" opacity="0.8" />
-                            <!-- Body -->
-                            <rect x="60" y="80" width="80" height="60" rx="4" fill="rgba(124,58,237,0.1)" />
-                            <rect x="150" y="80" width="110" height="10" rx="2" fill="rgba(255,255,255,0.1)" />
-                            <rect x="150" y="100" width="90" height="8" rx="2" fill="rgba(255,255,255,0.05)" />
-                            <rect x="150" y="115" width="100" height="8" rx="2" fill="rgba(255,255,255,0.05)" />
-                            <rect x="150" y="135" width="40" height="14" rx="4" fill="rgba(96,165,250,0.2)" />
-                        </svg>
-                    </div>
-                    <div>
-                        <div class="project-number">07 / 08</div>
-                        <div class="project-tag">Full Stack · E-Commerce</div>
-                        <div class="project-title">Paracassa WebApp</div>
-                        <p class="project-desc">Designed and developed a full-stack e-commerce platform integrating
-                            multi-modal UI components, form validation, and API testing.</p>
-                        <div class="project-stack">
-                            <span class="stack-pill">ReactJS</span>
-                            <span class="stack-pill">TypeScript</span>
-                            <span class="stack-pill">Node.js</span>
-                            <span class="stack-pill">Postman</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 7: Fake News Classification -->
-                <div class="project-card reverse">
-                    <div>
-                        <div class="project-number">08 / 08</div>
-                        <div class="project-tag">NLP · Machine Learning</div>
-                        <div class="project-title">Fake News Classification</div>
-                        <p class="project-desc">Trained and tuned a Random Forest classifier enabling faster and more
-                            reliable misinformation detection using NLP techniques to analyze news headlines.</p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-val">92%</div>
-                                <div class="metric-label">F1-Score</div>
-                            </div>
-                        </div>
-                        <div class="project-stack">
-                            <span class="stack-pill">Scikit-learn</span>
-                            <span class="stack-pill">Random Forest</span>
-                            <span class="stack-pill">NLP</span>
-                            <span class="stack-pill">Python</span>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <svg viewBox="0 0 320 240" width="100%" height="100%">
-                            <rect width="320" height="240" fill="rgba(17,17,26,0.5)" />
-                            <!-- NLP / Forest representation -->
-                            <rect x="40" y="80" width="80" height="80" rx="6" fill="rgba(255,255,255,0.02)"
-                                stroke="rgba(255,255,255,0.1)" />
-                            <text x="80" y="115" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="DM Mono"
-                                font-size="8">RAW TEXT</text>
-                            <path d="M120,120 L160,120" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"
-                                stroke-dasharray="3 3" />
-                            <!-- Random Forest Tree nodes -->
-                            <circle cx="210" cy="80" r="12" fill="rgba(124,58,237,0.2)"
-                                stroke="rgba(167,139,250,0.5)" />
-                            <circle cx="180" cy="120" r="10" fill="rgba(124,58,237,0.15)"
-                                stroke="rgba(167,139,250,0.4)" />
-                            <circle cx="240" cy="120" r="10" fill="rgba(124,58,237,0.15)"
-                                stroke="rgba(167,139,250,0.4)" />
-                            <circle cx="160" cy="160" r="8" fill="rgba(16,185,129,0.3)" />
-                            <circle cx="200" cy="160" r="8" fill="rgba(239,68,68,0.3)" />
-                            <path d="M210,92 L180,110 M210,92 L240,110 M180,130 L160,152 M180,130 L200,152"
-                                stroke="rgba(255,255,255,0.1)" stroke-width="1" />
-                        </svg>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div class="glow-line"></div>
-
-    <!-- ==============================
+        <!-- ==============================
      4. AI ARCHITECTURE SECTION
      ============================== -->
-    <section id="architecture">
-        <div style="max-width:1200px;margin:0 auto;">
-            <div class="section-header" style="margin-bottom:56px;">
-                <div class="section-eyebrow">// systems thinking</div>
-                <h2 class="section-title">AI <em>Architecture</em></h2>
-                <p class="section-sub">How I think about building AI systems — from prompt layer to infrastructure.</p>
-            </div>
-            <div class="arch-container">
-                <div>
-                    <div class="arch-capabilities">
-                        <div class="arch-cap">
-                            <div class="arch-cap-head">
-                                <div class="arch-cap-icon">⚡</div>
-                                <div class="arch-cap-title">LLM Orchestration</div>
-                            </div>
-                            <div class="arch-cap-desc">Routing, chaining, and grounding LLMs with Groq, OpenAI, Gemini.
-                                Prompt engineering, output parsing, fallback strategies.</div>
-                        </div>
-                        <div class="arch-cap">
-                            <div class="arch-cap-head">
-                                <div class="arch-cap-icon">🔗</div>
-                                <div class="arch-cap-title">Workflow Automation</div>
-                            </div>
-                            <div class="arch-cap-desc">n8n pipelines with webhook ingestion, AI enrichment,
-                                multi-channel routing. Built for real client deployments.</div>
-                        </div>
-                        <div class="arch-cap">
-                            <div class="arch-cap-head">
-                                <div class="arch-cap-icon">🐳</div>
-                                <div class="arch-cap-title">Containerized Deployment</div>
-                            </div>
-                            <div class="arch-cap-desc">FastAPI + Docker + CI/CD. Production-hardened for adversarial
-                                grading pipelines and enterprise release cycles.</div>
-                        </div>
-                        <div class="arch-cap">
-                            <div class="arch-cap-head">
-                                <div class="arch-cap-icon">🧠</div>
-                                <div class="arch-cap-title">ML Systems</div>
-                            </div>
-                            <div class="arch-cap-desc">RL environments, CNNs, LangChain agents. Bridging research-grade
-                                ML with deployable software systems.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="arch-visual">
-                    <svg viewBox="0 0 380 360" width="100%" height="100%">
-                        <defs>
-                            <radialGradient id="ag1" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.12" />
-                                <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
-                            </radialGradient>
-                        </defs>
-                        <rect width="380" height="360" fill="url(#ag1)" />
-
-                        <!-- Layer labels -->
-                        <text x="20" y="46" fill="rgba(167,139,250,0.4)" font-family="DM Mono" font-size="7"
-                            letter-spacing="0.1em">INTERFACE LAYER</text>
-                        <rect x="16" y="52" width="348" height="50" rx="8" fill="rgba(124,58,237,0.06)"
-                            stroke="rgba(167,139,250,0.12)" stroke-width="0.8" />
-                        <rect x="32" y="64" width="72" height="26" rx="5" fill="rgba(37,99,235,0.12)"
-                            stroke="rgba(96,165,250,0.25)" stroke-width="0.8" />
-                        <text x="68" y="80" text-anchor="middle" fill="#60a5fa" font-family="DM Mono" font-size="7">REST
-                            API</text>
-                        <rect x="116" y="64" width="72" height="26" rx="5" fill="rgba(37,99,235,0.1)"
-                            stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
-                        <text x="152" y="80" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                            font-size="7">WEBHOOK</text>
-                        <rect x="200" y="64" width="72" height="26" rx="5" fill="rgba(37,99,235,0.1)"
-                            stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
-                        <text x="236" y="80" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                            font-size="7">TELEGRAM</text>
-                        <rect x="284" y="64" width="68" height="26" rx="5" fill="rgba(37,99,235,0.1)"
-                            stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
-                        <text x="318" y="80" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                            font-size="7">ANGULAR</text>
-
-                        <!-- Arrow down -->
-                        <line x1="190" y1="102" x2="190" y2="122" stroke="rgba(167,139,250,0.3)" stroke-width="1"
-                            stroke-dasharray="3 3" />
-
-                        <text x="20" y="140" fill="rgba(167,139,250,0.4)" font-family="DM Mono" font-size="7"
-                            letter-spacing="0.1em">ORCHESTRATION LAYER</text>
-                        <rect x="16" y="146" width="348" height="50" rx="8" fill="rgba(124,58,237,0.08)"
-                            stroke="rgba(167,139,250,0.15)" stroke-width="0.8" />
-                        <rect x="32" y="158" width="70" height="26" rx="5" fill="rgba(124,58,237,0.15)"
-                            stroke="rgba(167,139,250,0.3)" stroke-width="0.8" />
-                        <text x="67" y="174" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                            font-size="7">LANGCHAIN</text>
-                        <rect x="114" y="158" width="60" height="26" rx="5" fill="rgba(124,58,237,0.12)"
-                            stroke="rgba(167,139,250,0.25)" stroke-width="0.8" />
-                        <text x="144" y="174" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                            font-size="7">N8N</text>
-                        <rect x="186" y="158" width="82" height="26" rx="5" fill="rgba(124,58,237,0.12)"
-                            stroke="rgba(167,139,250,0.25)" stroke-width="0.8" />
-                        <text x="227" y="174" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                            font-size="7">FASTAPI</text>
-                        <rect x="280" y="158" width="72" height="26" rx="5" fill="rgba(124,58,237,0.1)"
-                            stroke="rgba(167,139,250,0.2)" stroke-width="0.8" />
-                        <text x="316" y="174" text-anchor="middle" fill="#a78bfa" font-family="DM Mono"
-                            font-size="7">PYDANTIC</text>
-
-                        <line x1="190" y1="196" x2="190" y2="216" stroke="rgba(167,139,250,0.3)" stroke-width="1"
-                            stroke-dasharray="3 3" />
-
-                        <text x="20" y="234" fill="rgba(167,139,250,0.4)" font-family="DM Mono" font-size="7"
-                            letter-spacing="0.1em">MODEL LAYER</text>
-                        <rect x="16" y="240" width="348" height="50" rx="8" fill="rgba(37,99,235,0.05)"
-                            stroke="rgba(96,165,250,0.1)" stroke-width="0.8" />
-                        <rect x="32" y="252" width="64" height="26" rx="5" fill="rgba(37,99,235,0.12)"
-                            stroke="rgba(96,165,250,0.25)" stroke-width="0.8" />
-                        <text x="64" y="268" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                            font-size="7">OPENAI</text>
-                        <rect x="108" y="252" width="64" height="26" rx="5" fill="rgba(37,99,235,0.1)"
-                            stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
-                        <text x="140" y="268" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                            font-size="7">GROQ</text>
-                        <rect x="184" y="252" width="72" height="26" rx="5" fill="rgba(37,99,235,0.1)"
-                            stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
-                        <text x="220" y="268" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                            font-size="7">GEMINI</text>
-                        <rect x="268" y="252" width="84" height="26" rx="5" fill="rgba(37,99,235,0.08)"
-                            stroke="rgba(96,165,250,0.15)" stroke-width="0.8" />
-                        <text x="310" y="268" text-anchor="middle" fill="#60a5fa" font-family="DM Mono"
-                            font-size="7">LLAMA 3 70B</text>
-
-                        <line x1="190" y1="290" x2="190" y2="310" stroke="rgba(167,139,250,0.3)" stroke-width="1"
-                            stroke-dasharray="3 3" />
-
-                        <text x="20" y="328" fill="rgba(167,139,250,0.4)" font-family="DM Mono" font-size="7"
-                            letter-spacing="0.1em">INFRA LAYER</text>
-                        <rect x="16" y="334" width="348" height="20" rx="5" fill="rgba(255,255,255,0.02)"
-                            stroke="rgba(255,255,255,0.06)" stroke-width="0.5" />
-                        <text x="190" y="348" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-family="DM Mono"
-                            font-size="7" letter-spacing="0.1em">DOCKER · AZURE DEVOPS · GCP CLOUD RUN ·
-                            POSTGRESQL</text>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="glow-line"></div>
-
-
-    <!-- ==============================
-     WRITING / BLOGS
-     ============================== -->
-    <section id="writing">
-        <div style="max-width:1200px;margin:0 auto;">
-            <div class="section-header">
-                <div class="section-eyebrow">// thought leadership</div>
-                <h2 class="section-title">Thoughts & <em>Writing</em></h2>
-                <p class="section-sub">Deep dives into AI infrastructure, LLM evaluation, and security.</p>
-            </div>
-            <div class="blog-grid">
-                <!-- Blog 1 -->
-                <a href="https://medium.com/@hiranipreet20/context-rot-why-more-context-can-quietly-break-large-language-models-f9f1e7dcca7f"
-                    target="_blank" class="blog-card">
-                    <div class="blog-image-wrapper">
-                        <img src="assets/context_rot.jpg" alt="Context Rot Thumbnail">
-                    </div>
-                    <div class="blog-tag">LLM Evaluation</div>
-                    <div class="blog-title">Context Rot: Why More Context Can Quietly Break Large Language Models</div>
-                    <div class="blog-desc">An analysis of how expanding context windows can unexpectedly degrade LLM
-                        performance, and strategies to mitigate context dilution.</div>
-                    <div class="blog-link">Read on Medium <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M1 11L11 1M11 1H3.5M11 1V8.5" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></div>
-                </a>
-                <!-- Blog 2 -->
-                <a href="https://medium.com/@hiranipreet20/model-armor-the-invisible-shield-protecting-ai-from-threats-68d8cdd11581"
-                    target="_blank" class="blog-card">
-                    <div class="blog-image-wrapper">
-                        <img src="assets/model_armor.jpg" alt="Model Armor Thumbnail">
-                    </div>
-                    <div class="blog-tag">AI Security</div>
-                    <div class="blog-title">Model Armor: The invisible shield protecting AI from threats</div>
-                    <div class="blog-desc">Exploring robust security mechanisms, prompt injection defenses, and
-                        guardrails necessary for deploying AI systems safely in production.</div>
-                    <div class="blog-link">Read on Medium <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M1 11L11 1M11 1H3.5M11 1V8.5" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div class="glow-line"></div>
-    <!-- ==============================
-     5. EXPERIENCE TIMELINE
-     ============================== -->
-    <section id="experience">
-        <div style="max-width:1200px;margin:0 auto;">
-            <div class="section-header">
-                <div class="section-eyebrow">// career path</div>
-                <h2 class="section-title">Where I've <em>Built</em></h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <!-- <div class="timeline-date">Jun 2025 – Present</div> -->
-                    <div class="timeline-company">Allcargo Logistics Pvt. Ltd. · Mumbai</div>
-                    <div class="timeline-role">Software Developer</div>
-                    <div class="timeline-body">Led end-to-end delivery of enterprise truck management portal. Primary
-                        technical liaison during UAT sessions. Refactored SQL stored procedures and configured Azure
-                        DevOps CI/CD pipelines.</div>
-                    <div class="timeline-achievements">
-                        <span class="achievement-pill highlight">40% scheduling time ↓</span>
-                        <span class="achievement-pill highlight">25% on-time delivery ↑</span>
-                        <span class="achievement-pill highlight">35% query speed ↑</span>
-                        <span class="achievement-pill">50+ transporters onboarded</span>
-                        <span class="achievement-pill">Angular + .NET + SQL Server</span>
-                        <span class="achievement-pill">Azure DevOps</span>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <!-- <div class="timeline-date">May 2024 – Nov 2024</div> -->
-                    <div class="timeline-company">Erevbay Pvt. Ltd. · Mumbai</div>
-                    <div class="timeline-role">Technical Intern</div>
-                    <div class="timeline-body">Automated 4+ internal business workflows using RPA. Covered full SDLC
-                        from requirements to production, delivering zero regression defects at release.</div>
-                    <div class="timeline-achievements">
-                        <span class="achievement-pill highlight">~30% turnaround time ↓</span>
-                        <span class="achievement-pill highlight">0 regression defects</span>
-                        <span class="achievement-pill">4+ workflows automated</span>
-                        <span class="achievement-pill">RPA</span>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <!-- <div class="timeline-date">Dec 2022 – Apr 2023</div> -->
-                    <div class="timeline-company">Techon Dater Systems · Udaipur</div>
-                    <div class="timeline-role">Software Development Intern</div>
-                    <div class="timeline-body">Built and maintained full-stack web applications. Collaborated with
-                        designers and backend teams to deliver user-centric features.</div>
-                    <div class="timeline-achievements">
-                        <span class="achievement-pill">React.js</span>
-                        <span class="achievement-pill">Node.js</span>
-                        <span class="achievement-pill">Full-stack delivery</span>
-                    </div>
-                </div>
-                <div class="timeline-item" style="padding-bottom:0;">
-                    <div class="timeline-dot"></div>
-                    <!-- <div class="timeline-date">2022 – 2025</div> -->
-                    <div class="timeline-company">NMIMS University · Mumbai</div>
-                    <div class="timeline-role">B.Tech, Computer Science</div>
-                    <div class="timeline-body">Graduated with strong foundation in computer science, AI/ML, and systems
-                        engineering.</div>
-                    <div class="timeline-achievements">
-                        <span class="achievement-pill">NMIMS University</span>
-                        <span class="achievement-pill">B.Tech CS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="glow-line"></div>
-
-    <!-- ==============================
-     6. TECH STACK
-     ============================== -->
-    <section id="techstack">
-        <div style="max-width:1200px;margin:0 auto;">
-            <div class="section-header">
-                <div class="section-eyebrow">// tools of the trade</div>
-                <h2 class="section-title">The <em>Stack</em></h2>
-            </div>
-
-            <div class="tech-section-group">
-                <div class="tech-section-label">AI & Automation</div>
-                <div class="tech-grid">
-                    <div class="tech-orb"><span class="tech-icon">🤖</span>
-                        <div class="tech-name">OpenAI API</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">⚡</span>
-                        <div class="tech-name">Groq</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🦙</span>
-                        <div class="tech-name">Llama 3 70B</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🔗</span>
-                        <div class="tech-name">LangChain</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🔄</span>
-                        <div class="tech-name">n8n</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">💎</span>
-                        <div class="tech-name">Gemini API</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tech-section-group">
-                <div class="tech-section-label">Languages & Frameworks</div>
-                <div class="tech-grid">
-                    <div class="tech-orb"><span class="tech-icon">🐍</span>
-                        <div class="tech-name">Python</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">▲</span>
-                        <div class="tech-name">Angular</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">⚛️</span>
-                        <div class="tech-name">React</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🟦</span>
-                        <div class="tech-name">TypeScript</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🔷</span>
-                        <div class="tech-name">C# / .NET</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🟩</span>
-                        <div class="tech-name">Node.js</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tech-section-group">
-                <div class="tech-section-label">Infrastructure & Data</div>
-                <div class="tech-grid">
-                    <div class="tech-orb"><span class="tech-icon">🐳</span>
-                        <div class="tech-name">Docker</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🚀</span>
-                        <div class="tech-name">FastAPI</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">☁️</span>
-                        <div class="tech-name">Azure DevOps</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🗄️</span>
-                        <div class="tech-name">SQL Server</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🐘</span>
-                        <div class="tech-name">PostgreSQL</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🌐</span>
-                        <div class="tech-name">GCP</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tech-section-group" style="margin-bottom:0;">
-                <div class="tech-section-label">ML / Data Science</div>
-                <div class="tech-grid">
-                    <div class="tech-orb"><span class="tech-icon">🧠</span>
-                        <div class="tech-name">TensorFlow</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🔬</span>
-                        <div class="tech-name">Keras</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">📊</span>
-                        <div class="tech-name">scikit-learn</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">🎮</span>
-                        <div class="tech-name">Reinforcement L.</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">💬</span>
-                        <div class="tech-name">NLP</div>
-                    </div>
-                    <div class="tech-orb"><span class="tech-icon">👁️</span>
-                        <div class="tech-name">CNN / Vision</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="glow-line"></div>
-
-    <!-- ==============================
-     7. RECOGNITION SECTION
-     ============================== -->
-    <section id="recognition">
-        <div style="max-width:1200px;margin:0 auto;">
-            <div class="section-header">
-                <div class="section-eyebrow">// recognition</div>
-                <h2 class="section-title">Hackathons &amp; <em>Awards</em></h2>
-            </div>
-
-            <div class="recognition-hero">
-                <div style="position:relative;z-index:1;">
-                    <div class="hackathon-badge">🏆 Finalist</div>
-                    <div class="recognition-title">Meta PyTorch<br><span>OpenEnv</span><br>Hackathon</div>
-                    <p class="recognition-desc">Competed against 52,000+ participants globally. Built a production-grade
-                        RL environment for autonomous freight dispatching that survived adversarial grading pipelines.
+        <section id="architecture">
+            <div style="max-width:1200px;margin:0 auto;">
+                <div class="section-header" style="margin-bottom:56px;">
+                    <div class="section-eyebrow">// systems thinking</div>
+                    <h2 class="section-title">AI <em>Architecture</em></h2>
+                    <p class="section-sub">How I think about building AI systems — from prompt layer to infrastructure.
                     </p>
                 </div>
-                <div style="position:relative;z-index:1;">
-                    <svg viewBox="0 0 300 220" width="100%" height="220">
-                        <defs>
-                            <radialGradient id="tg1" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#f0c040" stop-opacity="0.15" />
-                                <stop offset="100%" stop-color="#f0c040" stop-opacity="0" />
-                            </radialGradient>
-                        </defs>
-                        <rect width="300" height="220" fill="url(#tg1)" />
-                        <!-- Trophy shape -->
-                        <rect x="120" y="60" width="60" height="60" rx="30" fill="rgba(240,192,64,0.15)"
-                            stroke="rgba(240,192,64,0.4)" stroke-width="1" />
-                        <text x="150" y="96" text-anchor="middle" fill="#f0c040" font-family="Syne" font-size="28"
-                            font-weight="800">🏆</text>
-                        <rect x="138" y="120" width="24" height="24" rx="0" fill="rgba(240,192,64,0.12)"
-                            stroke="rgba(240,192,64,0.3)" stroke-width="0.8" />
-                        <rect x="118" y="144" width="64" height="8" rx="4" fill="rgba(240,192,64,0.2)"
-                            stroke="rgba(240,192,64,0.3)" stroke-width="0.8" />
-                        <!-- Particles -->
-                        <circle cx="80" cy="80" r="2" fill="rgba(240,192,64,0.4)">
-                            <animate attributeName="cy" values="80;60;80" dur="3s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="220" cy="100" r="1.5" fill="rgba(240,192,64,0.3)">
-                            <animate attributeName="cy" values="100;78;100" dur="4s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="60" cy="150" r="2" fill="rgba(167,139,250,0.3)">
-                            <animate attributeName="cy" values="150;130;150" dur="5s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="240" cy="60" r="1.5" fill="rgba(96,165,250,0.3)">
-                            <animate attributeName="cy" values="60;45;60" dur="3.5s" repeatCount="indefinite" />
-                        </circle>
-                        <text x="150" y="180" text-anchor="middle" fill="rgba(240,192,64,0.5)" font-family="DM Mono"
-                            font-size="9" letter-spacing="0.1em">52,000+ PARTICIPANTS</text>
-                        <text x="150" y="195" text-anchor="middle" fill="rgba(240,192,64,0.3)" font-family="DM Mono"
-                            font-size="8">GLOBAL FINALIST</text>
-                    </svg>
+                <div class="arch-container">
+                    <div>
+                        <div class="arch-capabilities">
+                            <div class="arch-cap">
+                                <div class="arch-cap-head">
+                                    <div class="arch-cap-icon">⚡</div>
+                                    <div class="arch-cap-title">LLM Orchestration</div>
+                                </div>
+                                <div class="arch-cap-desc">Routing, chaining, and grounding LLMs with Groq, OpenAI,
+                                    Gemini.
+                                    Prompt engineering, output parsing, fallback strategies.</div>
+                            </div>
+                            <div class="arch-cap">
+                                <div class="arch-cap-head">
+                                    <div class="arch-cap-icon">🔗</div>
+                                    <div class="arch-cap-title">Workflow Automation</div>
+                                </div>
+                                <div class="arch-cap-desc">n8n pipelines with webhook ingestion, AI enrichment,
+                                    multi-channel routing. Built for real client deployments.</div>
+                            </div>
+                            <div class="arch-cap">
+                                <div class="arch-cap-head">
+                                    <div class="arch-cap-icon">🐳</div>
+                                    <div class="arch-cap-title">Containerized Deployment</div>
+                                </div>
+                                <div class="arch-cap-desc">FastAPI + Docker + CI/CD. Production-hardened for adversarial
+                                    grading pipelines and enterprise release cycles.</div>
+                            </div>
+                            <div class="arch-cap">
+                                <div class="arch-cap-head">
+                                    <div class="arch-cap-icon">🧠</div>
+                                    <div class="arch-cap-title">ML Systems</div>
+                                </div>
+                                <div class="arch-cap-desc">RL environments, CNNs, LangChain agents. Bridging
+                                    research-grade
+                                    ML with deployable software systems.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arch-visual">
+                        <svg viewBox="0 0 380 360" width="100%" height="100%">
+                            <defs>
+                                <radialGradient id="ag1" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.12" />
+                                    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+                            <rect width="380" height="360" fill="url(#ag1)" />
+
+                            <!-- Layer labels -->
+                            <text x="20" y="46" fill="rgba(167,139,250,0.4)" font-family="Fira Code" font-size="7"
+                                letter-spacing="0.1em">INTERFACE LAYER</text>
+                            <rect x="16" y="52" width="348" height="50" rx="8" fill="rgba(124,58,237,0.06)"
+                                stroke="rgba(167,139,250,0.12)" stroke-width="0.8" />
+                            <rect x="32" y="64" width="72" height="26" rx="5" fill="rgba(37,99,235,0.12)"
+                                stroke="rgba(96,165,250,0.25)" stroke-width="0.8" />
+                            <text x="68" y="80" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                font-size="7">REST
+                                API</text>
+                            <rect x="116" y="64" width="72" height="26" rx="5" fill="rgba(37,99,235,0.1)"
+                                stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
+                            <text x="152" y="80" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                font-size="7">WEBHOOK</text>
+                            <rect x="200" y="64" width="72" height="26" rx="5" fill="rgba(37,99,235,0.1)"
+                                stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
+                            <text x="236" y="80" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                font-size="7">TELEGRAM</text>
+                            <rect x="284" y="64" width="68" height="26" rx="5" fill="rgba(37,99,235,0.1)"
+                                stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
+                            <text x="318" y="80" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                font-size="7">ANGULAR</text>
+
+                            <!-- Arrow down -->
+                            <line x1="190" y1="102" x2="190" y2="122" stroke="rgba(167,139,250,0.3)" stroke-width="1"
+                                stroke-dasharray="3 3" />
+
+                            <text x="20" y="140" fill="rgba(167,139,250,0.4)" font-family="Fira Code" font-size="7"
+                                letter-spacing="0.1em">ORCHESTRATION LAYER</text>
+                            <rect x="16" y="146" width="348" height="50" rx="8" fill="rgba(124,58,237,0.08)"
+                                stroke="rgba(167,139,250,0.15)" stroke-width="0.8" />
+                            <rect x="32" y="158" width="70" height="26" rx="5" fill="rgba(124,58,237,0.15)"
+                                stroke="rgba(167,139,250,0.3)" stroke-width="0.8" />
+                            <text x="67" y="174" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                font-size="7">LANGCHAIN</text>
+                            <rect x="114" y="158" width="60" height="26" rx="5" fill="rgba(124,58,237,0.12)"
+                                stroke="rgba(167,139,250,0.25)" stroke-width="0.8" />
+                            <text x="144" y="174" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                font-size="7">N8N</text>
+                            <rect x="186" y="158" width="82" height="26" rx="5" fill="rgba(124,58,237,0.12)"
+                                stroke="rgba(167,139,250,0.25)" stroke-width="0.8" />
+                            <text x="227" y="174" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                font-size="7">FASTAPI</text>
+                            <rect x="280" y="158" width="72" height="26" rx="5" fill="rgba(124,58,237,0.1)"
+                                stroke="rgba(167,139,250,0.2)" stroke-width="0.8" />
+                            <text x="316" y="174" text-anchor="middle" fill="#a78bfa" font-family="Fira Code"
+                                font-size="7">PYDANTIC</text>
+
+                            <line x1="190" y1="196" x2="190" y2="216" stroke="rgba(167,139,250,0.3)" stroke-width="1"
+                                stroke-dasharray="3 3" />
+
+                            <text x="20" y="234" fill="rgba(167,139,250,0.4)" font-family="Fira Code" font-size="7"
+                                letter-spacing="0.1em">MODEL LAYER</text>
+                            <rect x="16" y="240" width="348" height="50" rx="8" fill="rgba(37,99,235,0.05)"
+                                stroke="rgba(96,165,250,0.1)" stroke-width="0.8" />
+                            <rect x="32" y="252" width="64" height="26" rx="5" fill="rgba(37,99,235,0.12)"
+                                stroke="rgba(96,165,250,0.25)" stroke-width="0.8" />
+                            <text x="64" y="268" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                font-size="7">OPENAI</text>
+                            <rect x="108" y="252" width="64" height="26" rx="5" fill="rgba(37,99,235,0.1)"
+                                stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
+                            <text x="140" y="268" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                font-size="7">GROQ</text>
+                            <rect x="184" y="252" width="72" height="26" rx="5" fill="rgba(37,99,235,0.1)"
+                                stroke="rgba(96,165,250,0.2)" stroke-width="0.8" />
+                            <text x="220" y="268" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                font-size="7">GEMINI</text>
+                            <rect x="268" y="252" width="84" height="26" rx="5" fill="rgba(37,99,235,0.08)"
+                                stroke="rgba(96,165,250,0.15)" stroke-width="0.8" />
+                            <text x="310" y="268" text-anchor="middle" fill="#60a5fa" font-family="Fira Code"
+                                font-size="7">LLAMA 3 70B</text>
+
+                            <line x1="190" y1="290" x2="190" y2="310" stroke="rgba(167,139,250,0.3)" stroke-width="1"
+                                stroke-dasharray="3 3" />
+
+                            <text x="20" y="328" fill="rgba(167,139,250,0.4)" font-family="Fira Code" font-size="7"
+                                letter-spacing="0.1em">INFRA LAYER</text>
+                            <rect x="16" y="334" width="348" height="20" rx="5" fill="rgba(255,255,255,0.02)"
+                                stroke="rgba(255,255,255,0.06)" stroke-width="0.5" />
+                            <text x="190" y="348" text-anchor="middle" fill="rgba(255,255,255,0.25)"
+                                font-family="Fira Code" font-size="7" letter-spacing="0.1em">DOCKER · AZURE DEVOPS · GCP
+                                CLOUD RUN ·
+                                POSTGRESQL</text>
+                        </svg>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="cert-grid" style="margin-top:16px;">
-                <div class="cert-card">
-                    <div class="cert-name">Machine Learning Specialization</div>
-                    <div class="cert-issuer">Coursera · Stanford / DeepLearning.AI</div>
+        <div class="glow-line"></div>
+
+
+        <!-- ==============================
+     WRITING / BLOGS
+     ============================== -->
+        <section id="writing">
+            <div style="max-width:1200px;margin:0 auto;">
+                <div class="section-header">
+                    <div class="section-eyebrow">// thought leadership</div>
+                    <h2 class="section-title">Thoughts & <em>Writing</em></h2>
+                    <p class="section-sub">Deep dives into AI infrastructure, LLM evaluation, and security.</p>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-name">Docker Foundations Professional</div>
-                    <div class="cert-issuer">Docker Inc.</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">TCS ION Career Edge</div>
-                    <div class="cert-issuer">Young Professional · TCS</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">Data Science Job Simulation</div>
-                    <div class="cert-issuer">BCGx</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">Introduction to Large Language Models</div>
-                    <div class="cert-issuer">Google Cloud</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">Introduction to Generative AI</div>
-                    <div class="cert-issuer">Google Cloud</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-name">Introduction to Responsible AI</div>
-                    <div class="cert-issuer">Google Cloud</div>
+                <div class="blog-grid">
+                    <!-- Blog 1 -->
+                    <a href="https://medium.com/@hiranipreet20/context-rot-why-more-context-can-quietly-break-large-language-models-f9f1e7dcca7f"
+                        target="_blank" class="blog-card">
+                        <div class="blog-image-wrapper">
+                            <img src="assets/context_rot.jpg" alt="Context Rot Thumbnail">
+                        </div>
+                        <div class="blog-tag">LLM Evaluation</div>
+                        <div class="blog-title">Context Rot: Why More Context Can Quietly Break Large Language Models
+                        </div>
+                        <div class="blog-desc">An analysis of how expanding context windows can unexpectedly degrade LLM
+                            performance, and strategies to mitigate context dilution.</div>
+                        <div class="blog-link">Read on Medium <svg width="12" height="12" viewBox="0 0 12 12"
+                                fill="none">
+                                <path d="M1 11L11 1M11 1H3.5M11 1V8.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </a>
+                    <!-- Blog 2 -->
+                    <a href="https://medium.com/@hiranipreet20/model-armor-the-invisible-shield-protecting-ai-from-threats-68d8cdd11581"
+                        target="_blank" class="blog-card">
+                        <div class="blog-image-wrapper">
+                            <img src="assets/model_armor.jpg" alt="Model Armor Thumbnail">
+                        </div>
+                        <div class="blog-tag">AI Security</div>
+                        <div class="blog-title">Model Armor: The invisible shield protecting AI from threats</div>
+                        <div class="blog-desc">Exploring robust security mechanisms, prompt injection defenses, and
+                            guardrails necessary for deploying AI systems safely in production.</div>
+                        <div class="blog-link">Read on Medium <svg width="12" height="12" viewBox="0 0 12 12"
+                                fill="none">
+                                <path d="M1 11L11 1M11 1H3.5M11 1V8.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="glow-line"></div>
+        <div class="glow-line"></div>
+        <!-- ==============================
+     5. EXPERIENCE TIMELINE
+     ============================== -->
+        <section id="experience">
+            <div style="max-width:1200px;margin:0 auto;">
+                <div class="section-header">
+                    <div class="section-eyebrow">// career path</div>
+                    <h2 class="section-title">Where I've <em>Built</em></h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <!-- <div class="timeline-date">Jun 2025 – Present</div> -->
+                        <div class="timeline-company">Allcargo Logistics Pvt. Ltd. · Mumbai</div>
+                        <div class="timeline-role">Software Developer</div>
+                        <div class="timeline-body">Led end-to-end delivery of enterprise truck management portal.
+                            Primary
+                            technical liaison during UAT sessions. Refactored SQL stored procedures and configured Azure
+                            DevOps CI/CD pipelines.</div>
+                        <div class="timeline-achievements">
+                            <span class="achievement-pill highlight">40% scheduling time ↓</span>
+                            <span class="achievement-pill highlight">25% on-time delivery ↑</span>
+                            <span class="achievement-pill highlight">35% query speed ↑</span>
+                            <span class="achievement-pill">50+ transporters onboarded</span>
+                            <span class="achievement-pill">Angular + .NET + SQL Server</span>
+                            <span class="achievement-pill">Azure DevOps</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <!-- <div class="timeline-date">May 2024 – Nov 2024</div> -->
+                        <div class="timeline-company">Erevbay Pvt. Ltd. · Mumbai</div>
+                        <div class="timeline-role">Technical Intern</div>
+                        <div class="timeline-body">Automated 4+ internal business workflows using RPA. Covered full SDLC
+                            from requirements to production, delivering zero regression defects at release.</div>
+                        <div class="timeline-achievements">
+                            <span class="achievement-pill highlight">~30% turnaround time ↓</span>
+                            <span class="achievement-pill highlight">0 regression defects</span>
+                            <span class="achievement-pill">4+ workflows automated</span>
+                            <span class="achievement-pill">RPA</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <!-- <div class="timeline-date">Dec 2022 – Apr 2023</div> -->
+                        <div class="timeline-company">Techon Dater Systems · Udaipur</div>
+                        <div class="timeline-role">Software Development Intern</div>
+                        <div class="timeline-body">Built and maintained full-stack web applications. Collaborated with
+                            designers and backend teams to deliver user-centric features.</div>
+                        <div class="timeline-achievements">
+                            <span class="achievement-pill">React.js</span>
+                            <span class="achievement-pill">Node.js</span>
+                            <span class="achievement-pill">Full-stack delivery</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" style="padding-bottom:0;">
+                        <div class="timeline-dot"></div>
+                        <!-- <div class="timeline-date">2022 – 2025</div> -->
+                        <div class="timeline-company">NMIMS University · Mumbai</div>
+                        <div class="timeline-role">B.Tech, Computer Science</div>
+                        <div class="timeline-body">Graduated with strong foundation in computer science, AI/ML, and
+                            systems
+                            engineering.</div>
+                        <div class="timeline-achievements">
+                            <span class="achievement-pill">NMIMS University</span>
+                            <span class="achievement-pill">B.Tech CS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- ==============================
+        <div class="glow-line"></div>
+
+        <!-- ==============================
+     6. TECH STACK
+     ============================== -->
+        <section id="techstack">
+            <div style="max-width:1200px;margin:0 auto;">
+                <div class="section-header">
+                    <div class="section-eyebrow">// tools of the trade</div>
+                    <h2 class="section-title">The <em>Stack</em></h2>
+                </div>
+
+                <div class="tech-section-group">
+                    <div class="tech-section-label">AI & Automation</div>
+                    <div class="tech-grid">
+                        <div class="tech-orb"><span class="tech-icon">🤖</span>
+                            <div class="tech-name">OpenAI API</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">⚡</span>
+                            <div class="tech-name">Groq</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🦙</span>
+                            <div class="tech-name">Llama 3 70B</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🔗</span>
+                            <div class="tech-name">LangChain</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🔄</span>
+                            <div class="tech-name">n8n</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">💎</span>
+                            <div class="tech-name">Gemini API</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-section-group">
+                    <div class="tech-section-label">Languages & Frameworks</div>
+                    <div class="tech-grid">
+                        <div class="tech-orb"><span class="tech-icon">🐍</span>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">▲</span>
+                            <div class="tech-name">Angular</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">⚛️</span>
+                            <div class="tech-name">React</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🟦</span>
+                            <div class="tech-name">TypeScript</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🔷</span>
+                            <div class="tech-name">C# / .NET</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🟩</span>
+                            <div class="tech-name">Node.js</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-section-group">
+                    <div class="tech-section-label">Infrastructure & Data</div>
+                    <div class="tech-grid">
+                        <div class="tech-orb"><span class="tech-icon">🐳</span>
+                            <div class="tech-name">Docker</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🚀</span>
+                            <div class="tech-name">FastAPI</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">☁️</span>
+                            <div class="tech-name">Azure DevOps</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🗄️</span>
+                            <div class="tech-name">SQL Server</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🐘</span>
+                            <div class="tech-name">PostgreSQL</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🌐</span>
+                            <div class="tech-name">GCP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-section-group" style="margin-bottom:0;">
+                    <div class="tech-section-label">ML / Data Science</div>
+                    <div class="tech-grid">
+                        <div class="tech-orb"><span class="tech-icon">🧠</span>
+                            <div class="tech-name">TensorFlow</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🔬</span>
+                            <div class="tech-name">Keras</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">📊</span>
+                            <div class="tech-name">scikit-learn</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">🎮</span>
+                            <div class="tech-name">Reinforcement L.</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">💬</span>
+                            <div class="tech-name">NLP</div>
+                        </div>
+                        <div class="tech-orb"><span class="tech-icon">👁️</span>
+                            <div class="tech-name">CNN / Vision</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <!-- ==============================
+     7. RECOGNITION SECTION
+     ============================== -->
+        <section id="recognition">
+            <div style="max-width:1200px;margin:0 auto;">
+                <div class="section-header">
+                    <div class="section-eyebrow">// recognition</div>
+                    <h2 class="section-title">Hackathons &amp; <em>Awards</em></h2>
+                </div>
+
+                <div class="recognition-hero">
+                    <div style="position:relative;z-index:1;">
+                        <div class="hackathon-badge">🏆 Finalist</div>
+                        <div class="recognition-title">Meta PyTorch<br><span>OpenEnv</span><br>Hackathon</div>
+                        <p class="recognition-desc">Competed against 52,000+ participants globally. Built a
+                            production-grade
+                            RL environment for autonomous freight dispatching that survived adversarial grading
+                            pipelines.
+                        </p>
+                    </div>
+                    <div style="position:relative;z-index:1;">
+                        <svg viewBox="0 0 300 220" width="100%" height="220">
+                            <defs>
+                                <radialGradient id="tg1" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#f0c040" stop-opacity="0.15" />
+                                    <stop offset="100%" stop-color="#f0c040" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+                            <rect width="300" height="220" fill="url(#tg1)" />
+                            <!-- Trophy shape -->
+                            <rect x="120" y="60" width="60" height="60" rx="30" fill="rgba(240,192,64,0.15)"
+                                stroke="rgba(240,192,64,0.4)" stroke-width="1" />
+                            <text x="150" y="96" text-anchor="middle" fill="#f0c040" font-family="Space Grotesk"
+                                font-size="28" font-weight="800">🏆</text>
+                            <rect x="138" y="120" width="24" height="24" rx="0" fill="rgba(240,192,64,0.12)"
+                                stroke="rgba(240,192,64,0.3)" stroke-width="0.8" />
+                            <rect x="118" y="144" width="64" height="8" rx="4" fill="rgba(240,192,64,0.2)"
+                                stroke="rgba(240,192,64,0.3)" stroke-width="0.8" />
+                            <!-- Particles -->
+                            <circle cx="80" cy="80" r="2" fill="rgba(240,192,64,0.4)">
+                                <animate attributeName="cy" values="80;60;80" dur="3s" repeatCount="indefinite" />
+                                <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="220" cy="100" r="1.5" fill="rgba(240,192,64,0.3)">
+                                <animate attributeName="cy" values="100;78;100" dur="4s" repeatCount="indefinite" />
+                                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="60" cy="150" r="2" fill="rgba(167,139,250,0.3)">
+                                <animate attributeName="cy" values="150;130;150" dur="5s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="240" cy="60" r="1.5" fill="rgba(96,165,250,0.3)">
+                                <animate attributeName="cy" values="60;45;60" dur="3.5s" repeatCount="indefinite" />
+                            </circle>
+                            <text x="150" y="180" text-anchor="middle" fill="rgba(240,192,64,0.5)"
+                                font-family="Fira Code" font-size="9" letter-spacing="0.1em">52,000+ PARTICIPANTS</text>
+                            <text x="150" y="195" text-anchor="middle" fill="rgba(240,192,64,0.3)"
+                                font-family="Fira Code" font-size="8">GLOBAL FINALIST</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="cert-grid" style="margin-top:16px;">
+                    <div class="cert-card">
+                        <div class="cert-name">Machine Learning Specialization</div>
+                        <div class="cert-issuer">Coursera · Stanford / DeepLearning.AI</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Docker Foundations Professional</div>
+                        <div class="cert-issuer">Docker Inc.</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">TCS ION Career Edge</div>
+                        <div class="cert-issuer">Young Professional · TCS</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Data Science Job Simulation</div>
+                        <div class="cert-issuer">BCGx</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Introduction to Large Language Models</div>
+                        <div class="cert-issuer">Google Cloud</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Introduction to Generative AI</div>
+                        <div class="cert-issuer">Google Cloud</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Introduction to Responsible AI</div>
+                        <div class="cert-issuer">Google Cloud</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-line"></div>
+
+        <!-- ==============================
      8. CONTACT SECTION
      ============================== -->
-    <section id="contact">
-        <div class="contact-glow"></div>
-        <div style="position:relative;z-index:2;">
-            <div class="contact-eyebrow">// let's build something</div>
-            <h2 class="contact-headline">
-                Open to<br><em>Exceptional</em><br>Opportunities
-            </h2>
-            <p class="contact-sub">Looking for someone who ships? Let's talk about what we can
-                build together.</p>
-            <div>
-                <a href="mailto:hiranipreet20@gmail.com" class="btn-primary"
-                    style="display:inline-flex;text-decoration:none;">
-                    hiranipreet20@gmail.com
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="margin-top:1px">
-                        <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
+        <section id="contact">
+            <div class="contact-glow"></div>
+            <div style="position:relative;z-index:2;">
+                <div class="contact-eyebrow">// let's build something</div>
+                <h2 class="contact-headline">
+                    Open to<br><em>Exceptional</em><br>Opportunities
+                </h2>
+                <p class="contact-sub">Looking for someone who ships? Let's talk about what we can
+                    build together.</p>
+                <div>
+                    <a href="mailto:hiranipreet20@gmail.com" class="btn-primary"
+                        style="display:inline-flex;text-decoration:none;">
+                        hiranipreet20@gmail.com
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="margin-top:1px">
+                            <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="contact-links" style="margin-top:24px;">
+                    <a href="https://linkedin.com/in/preet-hirani" class="contact-link"
+                        target="_blank">linkedin.com/in/preet-hirani</a>
+                    <span class="contact-divider">·</span>
+                    <a href="https://github.com/PreetHirani20" class="contact-link"
+                        target="_blank">github.com/PreetHirani20</a>
+                    <span class="contact-divider">·</span>
+                    <span class="contact-link">Mumbai, India</span>
+                    <span class="contact-divider">·</span>
+                    <span class="contact-link">+91 9869181708</span>
+                </div>
             </div>
-            <div class="contact-links" style="margin-top:24px;">
-                <a href="https://linkedin.com/in/preet-hirani" class="contact-link"
-                    target="_blank">linkedin.com/in/preet-hirani</a>
-                <span class="contact-divider">·</span>
-                <a href="https://github.com/PreetHirani20" class="contact-link"
-                    target="_blank">github.com/PreetHirani20</a>
-                <span class="contact-divider">·</span>
-                <span class="contact-link">Mumbai, India</span>
-                <span class="contact-divider">·</span>
-                <span class="contact-link">+91 9869181708</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ==============================
+        <!-- ==============================
      9. FOOTER
      ============================== -->
-    <footer>
-        <div class="footer-logo">PH</div>
-        <div class="footer-copy">© 2026 Preet Hirani. Designed with precision.</div>
-        <div class="footer-links">
-            <a href="https://linkedin.com/in/preet-hirani" class="footer-link" target="_blank">LinkedIn</a>
-            <a href="https://github.com/PreetHirani20" class="footer-link" target="_blank">GitHub</a>
-            <a href="mailto:hiranipreet20@gmail.com" class="footer-link">Email</a>
-        </div>
-    </footer>
+        <footer>
+            <div class="footer-logo">PH</div>
+            <div class="footer-copy">© 2026 Preet Hirani. Designed with precision.</div>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/preet-hirani" class="footer-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/PreetHirani20" class="footer-link" target="_blank">GitHub</a>
+                <a href="mailto:hiranipreet20@gmail.com" class="footer-link">Email</a>
+            </div>
+        </footer>
 
+
+    </div> <!-- END #main-wrapper -->
+
+    <!-- CONCEPT 1: PORTAL OVERLAY -->
+    <div id="portal-overlay" class="portal-overlay hidden" data-lenis-prevent>
+        <button class="close-portal" id="closePortal">X</button>
+        <div class="portal-hero" id="portalHero">
+            <!-- Visual gets moved here -->
+        </div>
+        <div class="portal-body" id="portalBody">
+            <div class="portal-content-inner">
+
+                <div class="portal-links">
+                    <a href="https://github.com/PreetHirani20/openenv-logistics" target="_blank"
+                        class="portal-link-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                        View Source on GitHub
+                    </a>
+                    <a href="https://huggingface.co/spaces/Preet20/openenv-logistics/tree/main" class="portal-link-btn">
+                        🚀 Live Hugging Face Space
+                    </a>
+                    <a href="https://www.linkedin.com/posts/preet-hirani_reinforcementlearning-docker-fastapi-share-7446448982026768384-I4YD/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfL74UB3hHklY9MtiN2ydyHYiWEHLN8j5E"
+                        class="portal-link-btn">
+                        📄 Read the Technical Deep-Dive
+                    </a>
+                </div>
+
+                <div class="portal-tags">
+                    <span>Python</span><span>FastAPI</span><span>Docker</span><span>Pydantic</span><span>Reinforcement
+                        Learning</span>
+                </div>
+
+                <h2 class="portal-title">OpenEnv Logistics</h2>
+                <p class="portal-subtitle">A battle-tested Reinforcement Learning environment built to benchmark LLM
+                    dispatchers. Meta PyTorch Hackathon Finalist.</p>
+
+                <div class="portal-metrics-row">
+                    <div class="portal-metric-card">
+                        <div class="portal-metric-val">Top Finalist</div>
+                        <div class="portal-metric-label">Out of 2,000+ Teams</div>
+                    </div>
+                    <div class="portal-metric-card">
+                        <div class="portal-metric-val">100% Survival</div>
+                        <div class="portal-metric-label">Against 30-min container death-timers</div>
+                    </div>
+                </div>
+
+                <div class="portal-section">
+                    <h3>The Motivation</h3>
+                    <h4>Bridging the Gap Between AI and Global Freight</h4>
+                    <p>Most AI models are benchmarked on static text or simple logic puzzles. But in enterprise supply
+                        chains, daily operations are defined by Pareto tradeoffs—you cannot optimize for a low carbon
+                        footprint without sacrificing speed and risking cargo spoilage. Drawing from real-world
+                        logistics operations, I built OpenEnv Logistics: a deterministic Reinforcement Learning "arena."
+                        Instead of building just another AI wrapper, I built the strict state-machine that forces
+                        frontier models to navigate cold-chain perishability, consolidation economics, and stochastic
+                        port disruptions.</p>
+                </div>
+
+                <div class="portal-section">
+                    <h3>The Challenge</h3>
+                    <h4>Surviving the Automated Gauntlet</h4>
+                    <p>The hardest part of this project wasn't the AI—it was the adversarial grading pipeline. To secure
+                        a finalist spot, this environment had to survive a highly hostile automated evaluation in the
+                        cloud. I had to heavily bulletproof the backend against hallucinating open-source LLMs injecting
+                        malformed markdown, Docker startup race conditions, buffered log invisibility, and strict
+                        30-minute container timeouts.</p>
+                </div>
+
+                <div class="portal-section">
+                    <h3>The Architecture</h3>
+                    <h4>Defensive Engineering & Strict Validation</h4>
+                    <p>The system operates on a containerized microservices architecture. A FastAPI physics engine
+                        maintains the deterministic state of the simulation. Because the environment relies on
+                        unpredictable LLM outputs, I utilized strict Pydantic schemas to instantly reject malformed data
+                        with 422 errors, ensuring the server never crashed. The inference loop features aggressive regex
+                        parsing, dynamic network timeouts, and hard loop cutoffs to guarantee 99.9% uptime across
+                        parallel evaluation episodes.</p>
+
+                    <div class="portal-diagram">
+                        <img src="assets/architecture-loop.png" alt="Defensive Loop for Safe Agent Actions"
+                            style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                    </div>
+                </div>
+
+                <div class="portal-section">
+                    <h3>Terminal Output</h3>
+                    <div class="terminal-mock">
+                        <div class="terminal-header">
+                            <div class="term-dot close"></div>
+                            <div class="term-dot min"></div>
+                            <div class="term-dot max"></div>
+                            <div class="term-title">openenv-logistics - bash</div>
+                        </div>
+                        <div class="terminal-body">
+                            <span style="color: #60a5fa">openenv@macbook</span>:<span
+                                style="color: #a78bfa">~/projects/openenv</span>$ python main.py --evaluate<br><br>
+                            <span style="color: #34d399">[INFO]</span> Initializing Deterministic RL Engine...<br>
+                            <span style="color: #34d399">[INFO]</span> Spawning LLM Dispatcher...<br>
+                            <span style="color: #fcd34d">[WARN]</span> Strict validation mode enabled.<br><br>
+                            🚀 <span style="color: #a78bfa">[EASY]</span> Day 0 | Action: dispatch_leg | Route: PORT_A
+                            -> DEPOT_1<br>
+                            🚀 <span style="color: #a78bfa">[EASY]</span> Day 1 | Action: consolidate_cargo | Load:
+                            50%<br>
+                            🚀 <span style="color: #a78bfa">[EASY]</span> Day 2 | Action: dispatch_leg | Route: DEPOT_1
+                            -> WAREHOUSE_4<br>
+                            ...<br><br>
+                            🏁 <span style="color: #34d399">[SUCCESS]</span> Evaluation Complete.<br>
+                            📊 Score: 0.82 / 1.00 (Carbon: 450kg, Spoilage: 0%, Delay: 2 hrs)<br>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CONCEPT 3: DRAWER OVERLAY -->
+    <div id="drawer-overlay" class="drawer-overlay hidden">
+        <button class="close-drawer" id="closeDrawer">X</button>
+        <div class="drawer-content">
+            <h2>DropGen AI <br> Intelligence</h2>
+            <div style="margin-top:20px;">
+                <p style="color: var(--muted); font-size: 14px;"><strong>Overview</strong></p>
+                <p style="margin-bottom: 20px;">AI-powered SaaS combining ML trend prediction with Llama 3 70B.</p>
+
+                <p style="color: var(--muted); font-size: 14px;"><strong>Key Metrics</strong></p>
+                <div class="drawer-metric">~70% Research time saved</div>
+                <div class="drawer-metric">10x Output speed</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP Flip Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
 
     <!-- Scripts -->
     <script src="script.js"></script>

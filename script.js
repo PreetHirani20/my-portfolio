@@ -76,4 +76,95 @@
     gsap.utils.toArray('.arch-cap').forEach((cap, i) => {
         gsap.from(cap, { scrollTrigger: { trigger: cap, start: 'top 88%', toggleActions: 'play none none none' }, opacity: 0, x: -30, duration: 0.7, ease: EASE });
     });
+    // CONCEPT 1: PORTAL LOGIC
+    const project1 = document.getElementById('project-1');
+    const portalOverlay = document.getElementById('portal-overlay');
+    const closePortalBtn = document.getElementById('closePortal');
+    const portalHero = document.getElementById('portalHero');
+    const portalContentInner = document.querySelector('.portal-content-inner');
+
+    if (project1 && portalOverlay && window.Flip) {
+        project1.addEventListener('click', () => {
+            // Disable background scrolling
+            document.body.style.overflow = 'hidden';
+
+            portalOverlay.classList.remove('hidden');
+            
+            const originalVisual = project1.querySelector('.project-visual');
+            const state = Flip.getState(originalVisual);
+            
+            portalHero.appendChild(originalVisual);
+            
+            originalVisual.style.position = 'absolute';
+            originalVisual.style.inset = '0';
+            originalVisual.style.width = '100%';
+            originalVisual.style.height = '100%';
+            originalVisual.style.borderRadius = '0';
+            originalVisual.style.border = 'none';
+            originalVisual.style.zIndex = '1';
+            
+            portalOverlay.classList.add('active');
+            
+            Flip.from(state, {
+                duration: 0.8,
+                ease: 'power4.inOut',
+                onComplete: () => {
+                    gsap.to(portalContentInner, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' });
+                }
+            });
+        });
+
+        closePortalBtn.addEventListener('click', () => {
+            gsap.to(portalContentInner, { opacity: 0, y: 30, duration: 0.3, onComplete: () => {
+                const visual = portalHero.querySelector('.project-visual');
+                const state = Flip.getState(visual);
+                
+                project1.appendChild(visual); 
+                
+                visual.style.position = '';
+                visual.style.inset = '';
+                visual.style.width = '';
+                visual.style.height = '';
+                visual.style.borderRadius = '';
+                visual.style.border = '';
+                visual.style.zIndex = '';
+                
+                portalOverlay.classList.remove('active');
+                
+                Flip.from(state, {
+                    duration: 0.8,
+                    ease: 'power4.inOut',
+                    onComplete: () => {
+                        portalOverlay.classList.add('hidden');
+                        portalOverlay.scrollTo(0, 0);
+                        document.body.style.overflow = '';
+                    }
+                });
+            }});
+        });
+    }
+
+    // CONCEPT 3: DRAWER LOGIC
+    const project2 = document.getElementById('project-2');
+    const drawerOverlay = document.getElementById('drawer-overlay');
+    const closeDrawerBtn = document.getElementById('closeDrawer');
+
+    if (project2 && drawerOverlay) {
+        project2.addEventListener('click', () => {
+            drawerOverlay.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                document.body.classList.add('drawer-open');
+                drawerOverlay.classList.add('active');
+            });
+        });
+
+        closeDrawerBtn.addEventListener('click', () => {
+            document.body.classList.remove('drawer-open');
+            drawerOverlay.classList.remove('active');
+            setTimeout(() => {
+                drawerOverlay.classList.add('hidden');
+            }, 600);
+        });
+    }
+
 })();
