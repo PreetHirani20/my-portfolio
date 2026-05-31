@@ -7,7 +7,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=6">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -335,10 +335,10 @@
                                     font-size="6">CARGO</text>
                                 <!-- Score bar -->
                                 <rect x="40" y="210" width="240" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-                                <rect x="40" y="210" width="180" height="6" rx="3" fill="rgba(124,58,237,0.5)" />
+                                <rect x="40" y="210" width="151" height="6" rx="3" fill="rgba(124,58,237,0.5)" />
                                 <text x="40" y="226" fill="rgba(167,139,250,0.7)" font-family="Fira Code"
                                     font-size="7">SCORE:
-                                    0.82 / 1.0</text>
+                                    0.63 / 1.0</text>
                                 <!-- Animated dot -->
                                 <circle r="3" fill="#a78bfa">
                                     <animateMotion dur="2s" repeatCount="indefinite"
@@ -412,18 +412,21 @@
                                 </div>
                             </div>
                             <div class="project-stack">
-                                <span class="stack-pill">Groq API</span>
-                                <span class="stack-pill">Llama 3 70B</span>
-                                <span class="stack-pill">Angular</span>
-                                <span class="stack-pill">PostgreSQL</span>
+                                <span class="stack-pill">Python</span>
+                                <span class="stack-pill">Llama 3 70B (Groq)</span>
+                                <span class="stack-pill">Pandas</span>
+                                <span class="stack-pill">Selenium</span>
+                                <span class="stack-pill">SQLite</span>
                                 <span class="stack-pill">GCP</span>
+                                <span class="stack-pill">Next.js</span>
+                                <span class="stack-pill">GitHub</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- PROJECT 3: AI Outreach System -->
                     <!-- PROJECT NEW: AI Outreach -->
-                    <div class="project-card">
+                    <div class="project-card" id="project-3" style="cursor: pointer;">
                         <div>
                             <div class="project-number">03 / 08</div>
                             <div class="project-tag">Automation · AI Outreach</div>
@@ -510,7 +513,7 @@
                             </svg>
                         </div>
                     </div><!-- PROJECT 3: Client Onboarding Automation -->
-                    <div class="project-card reverse">
+                    <div class="project-card reverse" id="project-4" style="cursor: pointer;">
                         <div>
                             <div class="project-number">04 / 08</div>
                             <div class="project-tag">Freelance · Shipped</div>
@@ -1428,40 +1431,79 @@
                 </div>
 
                 <div class="portal-section">
-                    <h3>The Motivation</h3>
-                    <h4>Bridging the Gap Between AI and Global Freight</h4>
-                    <p>Most AI models are benchmarked on static text or simple logic puzzles. But in enterprise supply
-                        chains, daily operations are defined by Pareto tradeoffs—you cannot optimize for a low carbon
-                        footprint without sacrificing speed and risking cargo spoilage. Drawing from real-world
-                        logistics operations, I built OpenEnv Logistics: a deterministic Reinforcement Learning "arena."
-                        Instead of building just another AI wrapper, I built the strict state-machine that forces
-                        frontier models to navigate cold-chain perishability, consolidation economics, and stochastic
-                        port disruptions.</p>
+                    <h3>The Problem</h3>
+                    <h4>Dynamic Decisions vs. Static Benchmarks</h4>
+                    <p>Most AI models are benchmarked on static text (like answering trivia or writing code). But in the
+                        real enterprise world—specifically logistics—decisions are dynamic. A freight forwarder makes
+                        decisions based on <strong>Pareto Tradeoffs</strong> (e.g., you cannot optimize for low carbon
+                        emissions without sacrificing speed). Achieving this optimal balance is complex, requiring an AI
+                        that doesn't just pick one efficient metric, but a balanced approach.</p>
                 </div>
 
                 <div class="portal-section">
-                    <h3>The Challenge</h3>
-                    <h4>Surviving the Automated Gauntlet</h4>
-                    <p>The hardest part of this project wasn't the AI—it was the adversarial grading pipeline. To secure
-                        a finalist spot, this environment had to survive a highly hostile automated evaluation in the
-                        cloud. I had to heavily bulletproof the backend against hallucinating open-source LLMs injecting
-                        malformed markdown, Docker startup race conditions, buffered log invisibility, and strict
-                        30-minute container timeouts.</p>
+                    <h3>About the Project</h3>
+                    <h4>A Custom RL Environment</h4>
+                    <p>OpenEnv Logistics is a strict, deterministic state machine that simulates global supply chain
+                        routing, complete with perishability of goods, freight consolidation economics, and random
+                        global disruptions (like port strikes or war). It exists to benchmark whether an LLM can
+                        successfully act as an autonomous dispatcher.</p>
+                    <ul
+                        style="color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1.6; padding-left: 20px; margin-bottom: 24px;">
+                        <li style="margin-bottom: 8px;"><strong>The Physics Engine (FastAPI):</strong> A local server
+                            maintaining the "state of the world." Tracks days passing, shipment locations, spoilage
+                            timers, and current carbon/cost expenditures.</li>
+                        <li style="margin-bottom: 8px;"><strong>The Mathematical Grader:</strong> A strict scoring
+                            algorithm taking the final state and outputting a score (0.0 to 1.0) based on delivery
+                            success, penalties, and Pareto efficiency bonuses.</li>
+                        <li style="margin-bottom: 8px;"><strong>The Inference Pipeline:</strong> Takes the current
+                            state, feeds it to an LLM, parses the chosen action, and advances the simulation.</li>
+                    </ul>
                 </div>
 
                 <div class="portal-section">
-                    <h3>The Architecture</h3>
-                    <h4>Defensive Engineering & Strict Validation</h4>
-                    <p>The system operates on a containerized microservices architecture. A FastAPI physics engine
-                        maintains the deterministic state of the simulation. Because the environment relies on
-                        unpredictable LLM outputs, I utilized strict Pydantic schemas to instantly reject malformed data
-                        with 422 errors, ensuring the server never crashed. The inference loop features aggressive regex
-                        parsing, dynamic network timeouts, and hard loop cutoffs to guarantee 99.9% uptime across
-                        parallel evaluation episodes.</p>
+                    <h3>How It Works</h3>
+                    <h4>The RL Loop: Observation → Action → Reward</h4>
+                    <p>I defined a strict language for the AI and Server to communicate:</p>
+                    <ul
+                        style="color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1.6; padding-left: 20px; margin-bottom: 24px;">
+                        <li style="margin-bottom: 8px;"><strong>Observation:</strong> The server sends a JSON payload
+                            containing weather data, shipments, routes, and global alerts.</li>
+                        <li style="margin-bottom: 8px;"><strong>Action Space:</strong> The AI must reply with strictly
+                            formatted JSON choosing one of three actions: <em>Wait</em> (do nothing for a day),
+                            <em>Dispatch</em> (move cargo down optimal route), or <em>Consolidate</em> (wait at port to
+                            group cargo for a 40% cost discount).
+                        </li>
+                        <li style="margin-bottom: 8px;"><strong>Dynamic Modes:</strong> Includes easy, medium, and hard
+                            modes (featuring random port strikes) forcing the AI to reroute dynamically mid-transit.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="portal-section">
+                    <h3>Defensive Engineering</h3>
+                    <h4>Bulletproofing the Pipeline</h4>
+                    <p>Surviving a 30-minute automated cloud grading gauntlet required strict validation and robust
+                        error handling:</p>
+                    <ul
+                        style="color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1.6; padding-left: 20px; margin-bottom: 24px;">
+                        <li style="margin-bottom: 8px;"><strong>FastAPI & Pydantic Validation:</strong> We cannot trust
+                            AI to return proper data. Pydantic acts as a validation layer; if an LLM returns a wrong
+                            data type, it prevents server contamination and asks the LLM for a proper answer again.</li>
+                        <li style="margin-bottom: 8px;"><strong>Data Formatting:</strong> Output text is stripped of
+                            backslashes and whitespace before it touches the system to prevent downstream crashes.</li>
+                        <li style="margin-bottom: 8px;"><strong>Network Timeouts:</strong> Standard Python requests will
+                            hang forever if the grader drops or an API lags. I added hard 15-second network timeouts to
+                            safely abort calls instead of freezing.</li>
+                        <li style="margin-bottom: 8px;"><strong>The Race Condition Trap:</strong> When booted in the
+                            cloud, the testing script runs in milliseconds while Uvicorn takes 1-2 seconds to bind. To
+                            prevent a <code>ConnectionRefusedError</code> at second zero, I built a startup ping loop
+                            that polls the server up to 15 times, waiting 1 second between each try, ensuring the test
+                            only starts when the server is fully awake.</li>
+                    </ul>
 
                     <div class="portal-diagram">
                         <img src="assets/architecture-loop.png" alt="Defensive Loop for Safe Agent Actions"
-                            style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                            style="width: 100%; height: auto; border-radius: 12px; display: block; margin-top: 24px;">
                     </div>
                 </div>
 
@@ -1475,20 +1517,8 @@
                             <div class="term-title">openenv-logistics - bash</div>
                         </div>
                         <div class="terminal-body">
-                            <span style="color: #60a5fa">openenv@macbook</span>:<span
-                                style="color: #a78bfa">~/projects/openenv</span>$ python main.py --evaluate<br><br>
-                            <span style="color: #34d399">[INFO]</span> Initializing Deterministic RL Engine...<br>
-                            <span style="color: #34d399">[INFO]</span> Spawning LLM Dispatcher...<br>
-                            <span style="color: #fcd34d">[WARN]</span> Strict validation mode enabled.<br><br>
-                            🚀 <span style="color: #a78bfa">[EASY]</span> Day 0 | Action: dispatch_leg | Route: PORT_A
-                            -> DEPOT_1<br>
-                            🚀 <span style="color: #a78bfa">[EASY]</span> Day 1 | Action: consolidate_cargo | Load:
-                            50%<br>
-                            🚀 <span style="color: #a78bfa">[EASY]</span> Day 2 | Action: dispatch_leg | Route: DEPOT_1
-                            -> WAREHOUSE_4<br>
-                            ...<br><br>
-                            🏁 <span style="color: #34d399">[SUCCESS]</span> Evaluation Complete.<br>
-                            📊 Score: 0.82 / 1.00 (Carbon: 450kg, Spoilage: 0%, Delay: 2 hrs)<br>
+                            <img src="assets/openenv_terminal.png" alt="Terminal Output"
+                                style="width: 100%; height: auto; border-radius: 12px; display: block; margin-top: 24px;">
                         </div>
                     </div>
                 </div>
@@ -1497,27 +1527,833 @@
         </div>
     </div>
 
-    <!-- CONCEPT 3: DRAWER OVERLAY -->
-    <div id="drawer-overlay" class="drawer-overlay hidden">
-        <button class="close-drawer" id="closeDrawer">X</button>
-        <div class="drawer-content">
-            <h2>DropGen AI <br> Intelligence</h2>
-            <div style="margin-top:20px;">
-                <p style="color: var(--muted); font-size: 14px;"><strong>Overview</strong></p>
-                <p style="margin-bottom: 20px;">AI-powered SaaS combining ML trend prediction with Llama 3 70B.</p>
+    <!-- PORTAL OVERLAY 2: DROPGEN AI -->
+    <div id="portal-overlay-2" class="portal-overlay hidden" data-lenis-prevent>
+        <button class="close-portal" id="closePortal2">X</button>
+        <div class="portal-hero" id="portalHero2">
+            <!-- Visual gets moved here -->
+        </div>
+        <div class="portal-body" id="portalBody2">
+            <div class="portal-content-inner portal-content-inner-2">
+                <div class="portal-tags">
+                    <span>AI SaaS Platform</span>
+                </div>
 
-                <p style="color: var(--muted); font-size: 14px;"><strong>Key Metrics</strong></p>
-                <div class="drawer-metric">~70% Research time saved</div>
-                <div class="drawer-metric">10x Output speed</div>
+                <h2 class="portal-title">DropGen AI</h2>
+                <p class="portal-subtitle" style="max-width: 800px;">End-to-end intelligence for dropshippers. Combines
+                    ML trend prediction with Llama 3 70B for automated marketing and supplier sourcing.</p>
+
+                <div class="portal-links">
+                    <a href="#" class="portal-link-btn">Read Full Case Study</a>
+                </div>
+
+                <div class="showcase-container" style="margin-top: 64px;">
+
+                    <!-- Item 1: Dropgen-UI1 -->
+                    <div class="showcase-item">
+                        <div class="showcase-image">
+                            <img src="assets/Dropgen-UI1.png" alt="Home & UI" />
+                        </div>
+                        <div class="showcase-info">
+                            <h3>Platform Overview</h3>
+                            <p>A sleek, interactive dashboard built to guide dropshippers from raw product data to
+                                fully-fledged autonomous marketing campaigns in seconds.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Dropgen-Products1 -->
+                    <div class="showcase-item reverse">
+                        <div class="showcase-image">
+                            <img src="assets/Dropgen-Products1.png" alt="Product Discovery 1" />
+                        </div>
+                        <div class="showcase-info">
+                            <h3>Trend Evaluator & Filtering</h3>
+                            <p>Evaluates raw e-commerce data to generate catchy names, optimized descriptions, and an
+                                AI-driven Trend Score (1-10). Powerful filtering tools help you identify winning
+                                products instantly.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Dropgen-Products2 -->
+                    <div class="showcase-item">
+                        <div class="showcase-image">
+                            <img src="assets/Dropgen-Products2.png" alt="Product Discovery 2" />
+                        </div>
+                        <div class="showcase-info">
+                            <h3>Deep Product Insights</h3>
+                            <p>Uncover hidden metrics and pricing strategies. DropGen AI continuously monitors market
+                                trends, giving you an unparalleled edge over competitors.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Dropgen-Marketing1 -->
+                    <div class="showcase-item reverse">
+                        <div class="showcase-image vertical-image">
+                            <img src="assets/Dropgen-Marketing1.png" alt="Marketing Engine" />
+                        </div>
+                        <div class="showcase-info">
+                            <h3>Autonomous Marketing Plans</h3>
+                            <p>Based on dynamic budgets, generates ready-to-deploy Meta/Google ad copy, hyper-local city
+                                targeting, and optimized platform budget splits.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Dropgen-Advertisements1 -->
+                    <div class="showcase-item">
+                        <div class="showcase-image vertical-image">
+                            <img src="assets/Dropgen-Advertisements1.jpg" alt="Advertisement Script Generator" />
+                        </div>
+                        <div class="showcase-info">
+                            <h3>Ad Script Generator</h3>
+                            <p>Automatically generates high-converting advertising copy and scripts tailored to your
+                                specific product, leveraging LLaMA 3's understanding of social media trends.</p>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
 
+
+    <!-- PORTAL OVERLAY 3: AI OUTREACH -->
+    <div id="portal-overlay-3" class="portal-overlay hidden" data-lenis-prevent>
+        <button class="close-portal" id="closePortal3">X</button>
+        <div class="portal-hero" id="portalHero3">
+            <!-- Visual gets moved here -->
+        </div>
+        <div class="portal-body" id="portalBody3">
+            <div class="portal-content-inner portal-content-inner-3">
+                <div class="demo-container">
+                    <!-- Left Side: Overview -->
+                    <div class="demo-info">
+                        <div>
+                            <div class="demo-badge">
+                                <span class="demo-badge-dot"></span>
+                                Autonomous Engine
+                            </div>
+                            <h1 class="demo-title">AI-Powered Outreach System</h1>
+                            <p class="demo-desc">Discovers Google Maps leads, extracts hidden business emails via web
+                                scraping, and sends highly personalized cold outreach campaigns—all running entirely on
+                                autopilot without manual intervention.</p>
+                        </div>
+
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-val" id="s-sent">0</div>
+                                <div class="metric-label">Emails Sent</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-val" id="s-leads">0</div>
+                                <div class="metric-label">Leads Processed</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-val" id="s-rate">0%</div>
+                                <div class="metric-label">Discovery Rate</div>
+                            </div>
+                        </div>
+
+                        <div class="flow-diagram">
+                            <img src="assets/google_maps_email_outreach.svg" alt="System Architecture Flow"
+                                onerror="this.style.display='none'">
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Live Terminal Demo -->
+                    <div class="live-panel">
+                        <div class="panel-header">
+                            <div class="panel-title">
+                                <i class="ti ti-terminal"></i> pipeline_execution.sh
+                            </div>
+                            <div class="status-indicator" id="status-txt">
+                                <span class="demo-badge-dot" id="status-dot" style="background: #10b981;"></span>
+                                System Idle
+                            </div>
+                        </div>
+
+                        <div class="pipeline-steps">
+                            <div class="step-row">
+                                <div class="step-icon" id="ic0"><i class="ti ti-map-pin"></i></div>
+                                <div class="step-content">
+                                    <div class="step-name">Google Maps Scraping</div>
+                                    <div class="step-meta" id="m0">Waiting for trigger...</div>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-icon" id="ic1"><i class="ti ti-search"></i></div>
+                                <div class="step-content">
+                                    <div class="step-name">Deep Web Extraction</div>
+                                    <div class="step-meta" id="m1">Pending website parsing...</div>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-icon" id="ic2"><i class="ti ti-brain"></i></div>
+                                <div class="step-content">
+                                    <div class="step-name">AI Enrichment & Filtering</div>
+                                    <div class="step-meta" id="m2">Pending lead qualification...</div>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-icon" id="ic3"><i class="ti ti-mail"></i></div>
+                                <div class="step-content">
+                                    <div class="step-name">Campaign Execution</div>
+                                    <div class="step-meta" id="m3">Pending dispatch...</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="email-preview" id="email-preview">
+                            <div class="email-header">
+                                <div class="email-avatar"><i class="ti ti-robot"></i></div>
+                                <div class="email-meta">
+                                    <div class="email-to">To: <span id="email-to-addr">contact@business.com</span></div>
+                                </div>
+                            </div>
+                            <div class="email-body">
+                                <div class="email-subject" id="email-subj">Scaling your operations with AI</div>
+                                <div class="email-text">
+                                    Hi <span id="email-biz" style="color: #fff; font-weight: 500;">Team</span>,<br><br>
+                                    I build autonomous AI systems that help businesses automate their lead generation
+                                    and internal workflows, saving 10-20 hours a week.<br><br>
+                                    I noticed your recent growth and'd love to show you a quick demo of how a custom AI
+                                    solution could handle your manual tasks.<br><br>
+                                    Let me know if you're open to a brief chat!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-footer">
+                            <button class="run-btn" id="run-btn" onclick="runDemo()">
+                                <i class="ti ti-player-play"></i> Initialize Autonomous Sequence
+                            </button>
+                            <div class="mini-stats">
+                                <div class="m-stat">
+                                    <span class="m-val" style="color: #10b981;" id="c-sent">0</span>
+                                    <span class="m-lbl">Sent</span>
+                                </div>
+                                <div class="m-stat">
+                                    <span class="m-val" style="color: var(--muted);" id="c-skip">0</span>
+                                    <span class="m-lbl">Skipped</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    const businesses = [
+                        { name: 'Apex Real Estate', email: '', website: 'apexre.in' },
+                        { name: 'SoundMonk Studio', email: 'info@soundmonk.co', website: 'soundmonk.co' },
+                        { name: 'Bright Dental Clinic', email: 'hello@brightdental.com', website: 'brightdental.com' },
+                        { name: 'LexPro Law Firm', email: '', website: '' },
+                        { name: 'The Brew Room', email: 'contact@thebrewroom.co', website: 'thebrewroom.co' },
+                    ];
+
+                    let sent = 0, found = 0, skipped = 0, running = false;
+
+                    function setStep(idx, state, metaText) {
+                        const icon = document.getElementById('ic' + idx);
+                        const meta = document.getElementById('m' + idx);
+
+                        icon.className = 'step-icon ' + state;
+                        meta.textContent = metaText;
+
+                        if (state === 'active') {
+                            meta.style.color = 'var(--purple)';
+                        } else if (state === 'done') {
+                            meta.style.color = '#10b981';
+                        } else {
+                            meta.style.color = 'var(--muted)';
+                        }
+                    }
+
+                    function setStatus(text, color) {
+                        const statusTxt = document.getElementById('status-txt');
+                        statusTxt.style.color = color;
+                        statusTxt.innerHTML = `<span class="demo-badge-dot" style="background: ${color}"></span> ${text}`;
+                    }
+
+                    function updateCounters() {
+                        document.getElementById('c-sent').textContent = sent;
+                        document.getElementById('c-skip').textContent = skipped;
+
+                        document.getElementById('s-sent').textContent = sent;
+                        document.getElementById('s-leads').textContent = (found + skipped);
+                        const total = found + skipped;
+                        const rate = total === 0 ? 0 : Math.round((found / total) * 100);
+                        document.getElementById('s-rate').textContent = rate + '%';
+                    }
+
+                    function showEmail(biz) {
+                        const preview = document.getElementById('email-preview');
+                        preview.style.display = 'block';
+                        document.getElementById('email-to-addr').textContent = biz.email;
+                        document.getElementById('email-subj').textContent = 'Quick question for ' + biz.name;
+                        document.getElementById('email-biz').textContent = biz.name;
+                    }
+
+                    const delay = ms => new Promise(r => setTimeout(r, ms));
+
+                    async function processLead(biz) {
+                        setStatus('Sequence Running...', 'var(--purple)');
+
+                        // Step 0: Google Maps
+                        setStep(0, 'active', 'Scanning region for: ' + biz.name);
+                        await delay(800);
+                        setStep(0, 'done', 'Located: ' + biz.name + ' (Data retrieved)');
+
+                        // Step 1: Web Extraction
+                        setStep(1, 'active', biz.website ? 'Crawling ' + biz.website + '...' : 'Searching web footprint...');
+                        await delay(900);
+
+                        let hasEmail = biz.email !== '';
+                        if (!hasEmail && biz.website) {
+                            setStep(1, 'active', 'Running NLP pattern matching...');
+                            await delay(600);
+                            // Simulate found email
+                            biz.email = 'contact@' + biz.website;
+                            hasEmail = true;
+                            setStep(1, 'done', 'Discovered hidden email: ' + biz.email);
+                        } else if (hasEmail) {
+                            setStep(1, 'done', 'Email found directly from Maps footprint.');
+                        } else {
+                            setStep(1, 'done', 'No website footprint found. Aborting trace.');
+                        }
+
+                        // Step 2: AI Enrichment
+                        setStep(2, 'active', 'Qualifying lead potential...');
+                        await delay(700);
+                        if (hasEmail) {
+                            found++;
+                            setStep(2, 'done', 'Lead qualified. Preparing outreach vector.');
+
+                            // Step 3: Campaign Execution
+                            setStep(3, 'active', 'Generating personalized copy...');
+                            showEmail(biz);
+                            await delay(1200);
+
+                            setStep(3, 'done', 'Payload dispatched to ' + biz.email);
+                            sent++;
+                        } else {
+                            skipped++;
+                            setStep(2, 'done', 'Lead disqualified (No contact vector).');
+                            setStep(3, 'idle', 'Aborted dispatch.');
+                            await delay(500);
+                        }
+
+                        updateCounters();
+                    }
+
+                    async function runDemo() {
+                        if (running) return;
+                        running = true;
+
+                        const btn = document.getElementById('run-btn');
+                        btn.disabled = true;
+                        btn.innerHTML = '<i class="ti ti-loader"></i> Processing Batch Job...';
+                        document.getElementById('email-preview').style.display = 'none';
+
+                        // Reset stats for fresh run
+                        sent = 0; found = 0; skipped = 0;
+                        updateCounters();
+
+                        for (let i = 0; i < businesses.length; i++) {
+                            // Reset UI steps
+                            [0, 1, 2, 3].forEach(idx => setStep(idx, 'idle', 'Pending sequence...'));
+                            document.getElementById('email-preview').style.display = 'none';
+
+                            await processLead({ ...businesses[i] });
+                            await delay(800);
+                        }
+
+                        setStatus('System Idle', '#10b981');
+                        btn.disabled = false;
+                        btn.innerHTML = '<i class="ti ti-refresh"></i> Run Another Batch';
+
+                        [0, 1, 2, 3].forEach(idx => setStep(idx, 'done', 'Sequence complete.'));
+                        running = false;
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!-- PORTAL OVERLAY 4: AI ONBOARDING -->
+    <div id="portal-overlay-4" class="portal-overlay hidden" data-lenis-prevent>
+        <button class="close-portal" id="closePortal4">X</button>
+        <div class="portal-hero" id="portalHero4">
+            <!-- Visual gets moved here -->
+        </div>
+        <div class="portal-body" id="portalBody4">
+            <div class="portal-content-inner portal-content-inner-4">
+                <div class="demo-container demo-container-4">
+                    <!-- Left Side: Overview -->
+                    <div class="demo-info">
+                        <div>
+                            <div class="demo-badge">
+                                <span class="demo-badge-dot"></span>
+                                <span>Freelance · Shipped</span>
+                            </div>
+                            <h1 class="demo-title">
+                                AI Teacher Onboarding Automation
+                            </h1>
+                            <p class="demo-desc">End-to-end webhook automation that ingests teacher data (text/resumes),
+                                uses GPT-4.1 to extract structural profiles, and updates the DB via API callback.</p>
+                        </div>
+
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-val" id="s4-time">~8s</div>
+                                <div class="metric-label">Profile Generated</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-val" id="s4-fields">5</div>
+                                <div class="metric-label">API Fields Mapped</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-val" id="s4-inputs">2</div>
+                                <div class="metric-label">Input Types</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-val" id="s4-manual">0</div>
+                                <div class="metric-label">Manual Steps</div>
+                            </div>
+                        </div>
+
+                        <!-- Inline Pipeline Diagram -->
+                        <div class="pipeline-diagram-4">
+                            <div class="pipe4-title">n8n Pipeline Architecture</div>
+                            <div class="pipe4-flow">
+                                <div class="pipe4-node pipe4-entry">
+                                    <span class="pipe4-icon">⚡</span>
+                                    <span class="pipe4-label">Webhook</span>
+                                </div>
+                                <div class="pipe4-arrow">→</div>
+                                <div class="pipe4-node">
+                                    <span class="pipe4-icon">↩️</span>
+                                    <span class="pipe4-label">Respond 200</span>
+                                </div>
+                                <div class="pipe4-arrow">→</div>
+                                <div class="pipe4-node pipe4-branch">
+                                    <span class="pipe4-icon">🔀</span>
+                                    <span class="pipe4-label">Branch</span>
+                                </div>
+                                <div class="pipe4-arrow">→</div>
+                                <div class="pipe4-node">
+                                    <span class="pipe4-icon">🧹</span>
+                                    <span class="pipe4-label">Normalize</span>
+                                </div>
+                                <div class="pipe4-arrow">→</div>
+                                <div class="pipe4-node">
+                                    <span class="pipe4-icon">🛡️</span>
+                                    <span class="pipe4-label">Validate</span>
+                                </div>
+                                <div class="pipe4-arrow">→</div>
+                                <div class="pipe4-node pipe4-ai">
+                                    <span class="pipe4-icon">🤖</span>
+                                    <span class="pipe4-label">GPT-4.1</span>
+                                </div>
+                                <div class="pipe4-arrow">→</div>
+                                <div class="pipe4-node pipe4-send">
+                                    <span class="pipe4-icon">📡</span>
+                                    <span class="pipe4-label">Callback</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Interactive Onboarding Demo -->
+                    <div class="live-panel live-panel-4">
+                        <div class="panel-header" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <div class="panel-title">
+                                💻 onboarding_pipeline.sh
+                            </div>
+                            <div class="status-indicator" id="status4-txt">
+                                <span class="demo-badge-dot" id="status4-dot" style="background: #10b981;"></span>
+                                System Idle
+                            </div>
+                        </div>
+
+                        <!-- Input Section -->
+                        <div class="onboard-input-section">
+                            <div class="input-type-toggle">
+                                <button class="type-btn active" id="typeTextBtn4" onclick="setInputType4('text')">📝
+                                    Text Bio</button>
+                                <button class="type-btn" id="typeResumeBtn4" onclick="setInputType4('resume')">📄 Resume
+                                    PDF</button>
+                            </div>
+                            <div class="bio-preview" id="bioPreview4">
+                                <div class="bio-label">Teacher Bio Input</div>
+                                <div class="bio-text" id="bioText4">I am a piano teacher with 8 years of experience. I
+                                    hold a B.Music degree from Delhi University. I teach classical, western and
+                                    Bollywood styles to students aged 6 to adult. My approach is patient and
+                                    step-by-step, ensuring every student builds confidence at their own pace.</div>
+                            </div>
+                            <div class="resume-preview" id="resumePreview4" style="display:none;">
+                                <div class="bio-label">Resume Upload</div>
+                                <div class="resume-file">
+                                    <span class="resume-icon">📄</span>
+                                    <div>
+                                        <div class="resume-name">teacher_resume.pdf</div>
+                                        <div class="resume-size">245 KB · PDF Document</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pipeline Steps -->
+                        <div class="pipeline-steps pipeline-steps-4">
+                            <div class="step-row">
+                                <div class="step-icon" id="p4-ic0">⚡</div>
+                                <div class="step-content">
+                                    <div class="step-name">Webhook Trigger</div>
+                                    <div class="step-meta" id="p4-m0">Awaiting POST request...</div>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-icon" id="p4-ic1">🔀</div>
+                                <div class="step-content">
+                                    <div class="step-name">Input Branching</div>
+                                    <div class="step-meta" id="p4-m1">Pending type detection...</div>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-icon" id="p4-ic2">🛡️</div>
+                                <div class="step-content">
+                                    <div class="step-name">Normalize & Validate</div>
+                                    <div class="step-meta" id="p4-m2">Pending content check...</div>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-icon" id="p4-ic3">🤖</div>
+                                <div class="step-content">
+                                    <div class="step-name">AI Profile Extraction</div>
+                                    <div class="step-meta" id="p4-m3">Pending GPT-4.1 call...</div>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-icon" id="p4-ic4">📡</div>
+                                <div class="step-content">
+                                    <div class="step-name">Admin API Callback</div>
+                                    <div class="step-meta" id="p4-m4">Pending structured POST...</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JSON Output Panel -->
+                        <div class="json-output-panel" id="jsonOutput4" style="display:none;">
+                            <div class="json-output-header">
+                                <span>📋 Structured Profile Output</span>
+                                <span class="json-status" id="jsonStatus4">Building...</span>
+                            </div>
+                            <div class="json-output-body">
+                                <pre id="jsonPre4"></pre>
+                            </div>
+                        </div>
+
+                        <!-- Telegram Notification -->
+                        <div class="tg-notification" id="tgNotify4" style="display:none;">
+                            <div class="tg-icon">✉️</div>
+                            <div class="tg-content">
+                                <div class="tg-title">Telegram Bot Alert</div>
+                                <div class="tg-msg" id="tgMsg4">✅ New teacher profile processed successfully. teacherId:
+                                    uuid-8a3f… — Review in admin panel.</div>
+                            </div>
+                        </div>
+
+                        <div class="panel-footer">
+                            <button class="run-btn" id="run-btn-4" onclick="runOnboardingDemo()">
+                                ▶ Process Batch Onboarding
+                            </button>
+                            <div class="mini-stats">
+                                <div class="m-stat">
+                                    <span class="m-val" style="color: #10b981;" id="c4-processed">0</span>
+                                    <span class="m-lbl">Processed</span>
+                                </div>
+                                <div class="m-stat">
+                                    <span class="m-val" style="color: var(--muted);" id="c4-failed">0</span>
+                                    <span class="m-lbl">Failed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Sections Below Demo -->
+                <div style="max-width: 800px; margin: 64px auto 0;">
+                    <div class="portal-section">
+                        <h3>The Problem</h3>
+                        <h4
+                            style="color: var(--purple); font-family: 'Space Grotesk', sans-serif; font-size: 18px; margin-bottom: 16px;">
+                            Teacher Onboarding Was Entirely Manual</h4>
+                        <p>Every new teacher on the platform had to fill in their profile fields manually — tagline,
+                            about
+                            me, teaching style, education, experience. Most teachers submitted a paragraph of
+                            unstructured text or a resume PDF. An admin had to read it, extract the relevant
+                            information, rewrite it for the platform's tone, and populate each field by hand. This took
+                            15–20 minutes per teacher and didn't scale.</p>
+                    </div>
+
+                    <div class="portal-section">
+                        <h3>What I Built</h3>
+                        <h4
+                            style="color: var(--purple); font-family: 'Space Grotesk', sans-serif; font-size: 18px; margin-bottom: 16px;">
+                            Autonomous AI Pipeline via n8n</h4>
+                        <p>I designed and deployed a fully autonomous n8n workflow that handles the entire onboarding
+                            pipeline — from webhook trigger to database update — with zero manual intervention:</p>
+                        <ul
+                            style="color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1.6; padding-left: 20px; margin-bottom: 24px;">
+                            <li style="margin-bottom: 8px;"><strong>Webhook Trigger:</strong> The backend fires
+                                a POST with teacherId, inputType (text or resume), and payload. n8n immediately responds
+                                with 200 so the app never hangs.</li>
+                            <li style="margin-bottom: 8px;"><strong>Smart Branching:</strong> An IF node routes the
+                                payload — resume PDFs get downloaded and parsed via Extract From File; raw text bios go
+                                straight to normalization.</li>
+                            <li style="margin-bottom: 8px;"><strong>Content Validation:</strong> A guard node checks for
+                                music-related keywords and minimum content length before sending to the AI — preventing
+                                garbage-in, garbage-out.</li>
+                            <li style="margin-bottom: 8px;"><strong>GPT-4.1 Extraction:</strong> An LLM Chain with a
+                                master prompt extracts and rewrites the bio into 5 structured fields: tagline, aboutMe,
+                                teachingStyle, educationalBackground, and professionalExperience.</li>
+                            <li style="margin-bottom: 8px;"><strong>Callback POST:</strong> The structured JSON is sent
+                                to platform's admin API via Bearer-authenticated POST. Fields update in the database
+                                instantly.</li>
+                            <li style="margin-bottom: 8px;"><strong>Telegram Alerts:</strong> Success and error
+                                notifications are sent to the admin's Telegram for one-click review.</li>
+                        </ul>
+                    </div>
+
+                    <div class="portal-section">
+                        <h3>Tech Stack</h3>
+                        <div class="portal-tags" style="flex-wrap: wrap;">
+                            <span>n8n</span>
+                            <span>GPT-4.1</span>
+                            <span>OpenRouter</span>
+                            <span>Webhook API</span>
+                            <span>PDF Extraction</span>
+                            <span>LLM Chain</span>
+                            <span>REST Callback</span>
+                            <span>Telegram Bot</span>
+                            <span>Bearer Auth</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ====== AI ONBOARDING DEMO ======
+        const teachersData = [
+            {
+                name: 'Sarah Jenkins',
+                type: 'text',
+                bio: 'I am a piano teacher with 8 years of experience. I hold a B.Music degree from Delhi University. I teach classical, western and Bollywood styles to students aged 6 to adult. My approach is patient and step-by-step, ensuring every student builds confidence at their own pace.',
+                file: null,
+                out: {
+                    teacherId: "uuid-8a3f-4b2c-9e1d",
+                    tagline: "Piano Instructor | Classical & Bollywood",
+                    aboutMe: "In my lessons, you'll build real confidence at your own pace. Whether you're drawn to classical ragas or Bollywood hits, I meet you where you are.",
+                    teachingStyle: "I break down every concept step by step so it always clicks. No rushing — we move at your speed until it feels natural.",
+                    educationalBackground: "B.Music, Delhi University → Students learn certified classical technique from day one.",
+                    professionalExperience: "8 years teaching ages 6–adult → patient, student-first pace across all skill levels."
+                }
+            },
+            {
+                name: 'Marcus Ray',
+                type: 'resume',
+                bio: null,
+                file: 'marcus_ray_cv_2024.pdf',
+                size: '1.2 MB · PDF Document',
+                out: {
+                    teacherId: "uuid-9b4g-5c3d-0f2e",
+                    tagline: "Vocal Coach | Pop, R&B & Jazz",
+                    aboutMe: "I help aspiring singers find their unique voice. With over a decade of live performance experience, I focus on technique, breath control, and stage presence.",
+                    teachingStyle: "My lessons are highly interactive. We focus 50% on vocal exercises and 50% on repertoire, ensuring you build stamina while singing songs you love.",
+                    educationalBackground: "Berklee College of Music (Vocal Performance) → Certified in Somatic Voicework.",
+                    professionalExperience: "12 years performing, 5 years teaching online & offline. Mentored contestants for national singing competitions."
+                }
+            },
+            {
+                name: 'Elena Rostova',
+                type: 'text',
+                bio: 'Hello. I teach violin and music theory. I played in the state symphony for 15 yrs. I prefer advanced students but will take dedicated beginners. Lessons are strict but rewarding.',
+                file: null,
+                out: {
+                    teacherId: "uuid-1c5h-6d4e-1g3f",
+                    tagline: "Violin & Theory | Symphony Veteran",
+                    aboutMe: "With 15 years in the State Symphony, I bring professional-level rigor to every lesson. I welcome dedicated beginners and advanced players ready to refine their craft.",
+                    teachingStyle: "I believe in a disciplined, rewarding approach. We focus heavily on bowing technique, intonation, and classical repertoire.",
+                    educationalBackground: "Conservatory trained, former State Symphony violinist.",
+                    professionalExperience: "15+ years orchestral performance, extensive private studio teaching experience."
+                }
+            }
+        ];
+
+        let p4Processed = 0, p4Failed = 0;
+        let onboardRunning = false;
+
+        function setInputType4(type) {
+            document.getElementById('typeTextBtn4').classList.toggle('active', type === 'text');
+            document.getElementById('typeResumeBtn4').classList.toggle('active', type === 'resume');
+            document.getElementById('bioPreview4').style.display = type === 'text' ? 'block' : 'none';
+            document.getElementById('resumePreview4').style.display = type === 'resume' ? 'flex' : 'none';
+        }
+
+        function loadTeacherUI(teacher) {
+            setInputType4(teacher.type);
+            if (teacher.type === 'text') {
+                document.getElementById('bioText4').textContent = teacher.bio;
+            } else {
+                document.querySelector('#resumePreview4 .resume-name').textContent = teacher.file;
+                document.querySelector('#resumePreview4 .resume-size').textContent = teacher.size;
+            }
+        }
+
+        function setStep4(idx, state, metaText) {
+            const icon = document.getElementById('p4-ic' + idx);
+            const meta = document.getElementById('p4-m' + idx);
+            icon.className = 'step-icon ' + state;
+            meta.textContent = metaText;
+            if (state === 'active') {
+                meta.style.color = 'var(--purple)';
+            } else if (state === 'done') {
+                meta.style.color = '#10b981';
+            } else {
+                meta.style.color = 'var(--muted)';
+            }
+        }
+
+        function setStatus4(text, color) {
+            const el = document.getElementById('status4-txt');
+            el.style.color = color;
+            el.innerHTML = '<span class="demo-badge-dot" style="background: ' + color + '"></span> ' + text;
+        }
+
+        function updateP4Counters() {
+            document.getElementById('c4-processed').textContent = p4Processed;
+            document.getElementById('c4-failed').textContent = p4Failed;
+        }
+
+        const delay4 = ms => new Promise(r => setTimeout(r, ms));
+
+        async function typeJSON(target, jsonObj) {
+            const lines = JSON.stringify(jsonObj, null, 2).split('\n');
+            target.textContent = '';
+            for (let i = 0; i < lines.length; i++) {
+                target.textContent += lines[i] + '\n';
+                target.parentElement.scrollTop = target.parentElement.scrollHeight;
+                await delay4(80); // slightly faster for batch
+            }
+        }
+
+        async function processTeacher(teacher) {
+            setStatus4('Pipeline Running...', 'var(--purple)');
+
+            // Load UI for current teacher
+            loadTeacherUI(teacher);
+
+            // Reset UI steps
+            for (let i = 0; i < 5; i++) setStep4(i, 'idle', 'Pending sequence...');
+            document.getElementById('jsonOutput4').style.display = 'none';
+            document.getElementById('tgNotify4').style.display = 'none';
+            await delay4(500); // brief pause to show UI update
+
+            // Step 0: Webhook
+            setStep4(0, 'active', 'POST /teacher-onboarding received...');
+            await delay4(600);
+            setStep4(0, 'done', `Webhook triggered · teacherId: ${teacher.out.teacherId.split('-')[1]} · 200 OK sent`);
+
+            // Step 1: Branching
+            setStep4(1, 'active', 'Detecting input type...');
+            await delay4(400);
+            if (teacher.type === 'text') {
+                setStep4(1, 'done', 'Branch: Text bio detected → normalize path');
+            } else {
+                setStep4(1, 'active', 'Branch: Resume PDF → downloading...');
+                await delay4(500);
+                setStep4(1, 'done', 'PDF extracted → 847 words parsed');
+            }
+
+            // Step 2: Normalize & Validate
+            setStep4(2, 'active', 'Cleaning text + running keyword check...');
+            await delay4(600);
+            setStep4(2, 'active', 'Music keywords found ✓');
+            await delay4(300);
+            setStep4(2, 'done', 'Content validated · Intent: Authentic ✓');
+
+            // Step 3: AI Extraction
+            setStep4(3, 'active', 'Sending to GPT-4.1 via OpenRouter...');
+            await delay4(500);
+            setStep4(3, 'active', 'LLM Chain executing master prompt...');
+
+            // Show JSON panel and start building
+            const jsonPanel = document.getElementById('jsonOutput4');
+            jsonPanel.style.display = 'block';
+            document.getElementById('jsonStatus4').textContent = 'Building...';
+            document.getElementById('jsonStatus4').style.color = 'var(--purple)';
+
+            await typeJSON(document.getElementById('jsonPre4'), teacher.out);
+            await delay4(200);
+
+            document.getElementById('jsonStatus4').textContent = '✓ Complete';
+            document.getElementById('jsonStatus4').style.color = '#10b981';
+            setStep4(3, 'done', 'Structured output parsed · 5 fields extracted');
+
+            // Step 4: Callback POST
+            setStep4(4, 'active', 'POSTing to platform.com/onboarding/n8n-callback...');
+            await delay4(600);
+            setStep4(4, 'done', 'Callback 200 OK · Profile fields updated in DB');
+
+            // Telegram notification
+            const tgNotify = document.getElementById('tgNotify4');
+            const tgMsg = document.getElementById('tgMsg4');
+            tgMsg.textContent = `✅ Profile processed: ${teacher.name}. teacherId: ${teacher.out.teacherId.split('-')[1]}… — Review in admin panel.`;
+
+            // Re-trigger animation
+            tgNotify.style.animation = 'none';
+            tgNotify.offsetHeight; /* trigger reflow */
+            tgNotify.style.display = 'flex';
+            tgNotify.style.animation = 'slideInUp 0.4s ease-out';
+
+            p4Processed++;
+            updateP4Counters();
+        }
+
+        async function runOnboardingDemo() {
+            if (onboardRunning) return;
+            onboardRunning = true;
+
+            const btn = document.getElementById('run-btn-4');
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Processing Batch Job...';
+
+            p4Processed = 0; p4Failed = 0;
+            updateP4Counters();
+
+            for (let i = 0; i < teachersData.length; i++) {
+                await processTeacher(teachersData[i]);
+                await delay4(1200); // Wait before next teacher
+            }
+
+            setStatus4('System Idle', '#10b981');
+            btn.disabled = false;
+            btn.innerHTML = '🔄 Run Another Batch';
+
+            for (let i = 0; i < 5; i++) setStep4(i, 'done', 'Batch sequence complete.');
+            onboardRunning = false;
+        }
+    </script>
+
     <!-- GSAP Flip Plugin -->
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="script.js?v=6"></script>
 
 </body>
 
